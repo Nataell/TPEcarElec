@@ -4,10 +4,10 @@ import { NavController } from 'ionic-angular';
 import { SettingsPage } from '../settings/settings';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-meal',
+  templateUrl: 'meal.html'
 })
-export class HomePage {
+export class MealPage {
 
   constructor(public navCtrl: NavController) {
 

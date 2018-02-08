@@ -4,10 +4,10 @@ import { NavController } from 'ionic-angular';
 import { SettingsPage } from '../settings/settings';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-basket',
+  templateUrl: 'basket.html'
 })
-export class HomePage {
+export class BasketPage {
 
   constructor(public navCtrl: NavController) {
 
