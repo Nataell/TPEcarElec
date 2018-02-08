@@ -1,0 +1,28 @@
+<ion-header>
+	<ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Produits</ion-title>
+		<ion-buttons end>
+			<button ion-button clear icon-only (click)="goSettings()">
+	      <ion-icon name='settings' is-active="false"></ion-icon>
+			</button>
+		</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<h1>Nouveautées</h1>
+	<ion-scroll scrollX="true" style="white-space:nowrap; height:120px;" (click)="goNewProduct()">
+		<img *ngFor="let product of products" src={{product.imgSrc}}>
+	</ion-scroll>
+	<h1>Les produits de saisons</h1>
+	<ion-scroll scrollX="true" style="white-space:nowrap; height:120px;" (click)="goSettings()">
+		<img *ngFor="let product of products" src={{product.imgSrc}}>
+	</ion-scroll>
+	<h1>Tout les produits</h1>
+	<ion-scroll scrollX="true" style="white-space:nowrap; height:120px;" (click)="goAllProduct()">
+		<img *ngFor="let product of products" src={{product.imgSrc}}>
+	</ion-scroll>
+</ion-content>
