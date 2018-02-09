@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { Recipe_WelcomePage } from '../pages/recipe_welcome/recipe_welcome';
 import { ProductsPage } from '../pages/products/products';
 import { MealPage } from '../pages/meal/meal';
-import { BasketPage } from '../pages/basket/basket';
+import { SettingsPage } from '../pages/settings/settings';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class MyApp {
 
 	@ViewChild(Nav) nav: Nav;
   rootPage:any = HomePage;
-	pages: Array<{title: string, component: any, icon: string, numberBadge: string}>;
+	pages: Array<{title: string, component: any, icon: string }>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen/*, badge: Badge*/) {
     platform.ready().then(() => {
@@ -32,11 +32,19 @@ export class MyApp {
 			//this.badge.set(5);
 
 			this.pages = [
+<<<<<<< HEAD
       	{ title: 'Accueil', component: HomePage, icon: 'home', numberBadge: "7" },
 				{ title: 'Recettes', component: Recipe_WelcomePage, icon: 'bookmarks', numberBadge: "7" },
 				{ title: 'Produits', component: ProductsPage, icon: 'nutrition', numberBadge: "7" },
 				{ title: 'Repas', component: MealPage, icon: 'restaurant', numberBadge: "7" },
 				{ title: 'Panier', component: BasketPage, icon: 'cart', numberBadge: "7" }
+=======
+      	{ title: 'Accueil', component: HomePage, icon: 'home' },
+				{ title: 'Recettes', component: RecipePage, icon: 'bookmarks' },
+				{ title: 'Produits', component: ProductsPage, icon: 'nutrition' },
+				{ title: 'Repas', component: MealPage, icon: 'restaurant' },
+				{ title: 'Paramètres', component: SettingsPage, icon: 'settings' }
+>>>>>>> 48b4af2... Change the main view the cart item. Remove padding in the products to have a better view.
     	];
 
     });
