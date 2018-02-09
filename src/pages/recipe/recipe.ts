@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { SettingsPage } from '../settings/settings';
+import { BasketPage } from '../basket/basket';
 
 @Component({
   selector: 'page-recipe',
@@ -13,8 +13,8 @@ export class RecipePage {
 
   }
 
-	goSettings(){
-		this.navCtrl.push(SettingsPage);
+	goBasket(){
+		this.navCtrl.push(BasketPage);
 	}
 
 }

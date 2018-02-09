@@ -5,24 +5,46 @@
     </button>
     <ion-title>Produits</ion-title>
 		<ion-buttons end>
-			<button ion-button clear icon-only (click)="goSettings()">
-	      <ion-icon name='settings' is-active="false"></ion-icon>
+			<button ion-button clear icon-only (click)="goBasket()"	>
+	      <ion-icon name='cart' is-active="false"></ion-icon>
 			</button>
 		</ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-	<h1>Nouveautées</h1>
-	<ion-scroll scrollX="true" style="white-space:nowrap; height:120px;" (click)="goNewProduct()">
-		<img *ngFor="let product of products" src={{product.imgSrc}}>
-	</ion-scroll>
-	<h1>Les produits de saisons</h1>
-	<ion-scroll scrollX="true" style="white-space:nowrap; height:120px;" (click)="goSettings()">
-		<img *ngFor="let product of products" src={{product.imgSrc}}>
-	</ion-scroll>
-	<h1>Tout les produits</h1>
-	<ion-scroll scrollX="true" style="white-space:nowrap; height:120px;" (click)="goAllProduct()">
-		<img *ngFor="let product of products" src={{product.imgSrc}}>
-	</ion-scroll>
+<ion-content>
+
+	<ion-card style="height: 220px;">
+		<ion-card-header>Nouveautées</ion-card-header>
+		<ion-scroll scrollX="true" style="white-space: nowrap; height:180px;" (click)="goNewProduct()">
+			<div *ngFor="let product of products" style="display: inline-block">
+				<img src={{product.imgSrc}}>
+				<p>{{product.imgTitle}}</p>
+				<div class="hline"></div>
+			</div>
+		</ion-scroll>
+	</ion-card>
+
+	<ion-card style="height: 220px;">
+		<ion-card-header>Les produits de saisons</ion-card-header>
+		<ion-scroll scrollX="true" style="white-space: nowrap; height:180px;" (click)="goSeasonProduct()">
+			<div *ngFor="let product of products" style="display: inline-block">
+				<img src={{product.imgSrc}}>
+				<p>{{product.imgTitle}}</p>
+				<div class="hline"></div>
+			</div>
+		</ion-scroll>
+	</ion-card>
+
+	<ion-card style="height: 220px;">
+		<ion-card-header>Tout les produits</ion-card-header>
+		<ion-scroll scrollX="true" style="white-space: nowrap; height:180px;" (click)="goAllProduct()">
+			<div *ngFor="let product of products" style="display: inline-block">
+				<img src={{product.imgSrc}}>
+				<p>{{product.imgTitle}}</p>
+				<div class="hline"></div>
+			</div>
+		</ion-scroll>
+	</ion-card>
+
 </ion-content>

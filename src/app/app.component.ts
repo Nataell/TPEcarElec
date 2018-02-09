@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { RecipePage } from '../pages/recipe/recipe';
 import { ProductsPage } from '../pages/products/products';
 import { MealPage } from '../pages/meal/meal';
-import { BasketPage } from '../pages/basket/basket';
+import { SettingsPage } from '../pages/settings/settings';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class MyApp {
 
 	@ViewChild(Nav) nav: Nav;
   rootPage:any = HomePage;
-	pages: Array<{title: string, component: any, icon: string, numberBadge: string}>;
+	pages: Array<{title: string, component: any, icon: string }>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen/*, badge: Badge*/) {
     platform.ready().then(() => {
@@ -32,11 +32,11 @@ export class MyApp {
 			//this.badge.set(5);
 
 			this.pages = [
-      	{ title: 'Accueil', component: HomePage, icon: 'home', numberBadge: "7" },
-				{ title: 'Recettes', component: RecipePage, icon: 'bookmarks', numberBadge: "7" },
-				{ title: 'Produits', component: ProductsPage, icon: 'nutrition', numberBadge: "7" },
-				{ title: 'Repas', component: MealPage, icon: 'restaurant', numberBadge: "7" },
-				{ title: 'Panier', component: BasketPage, icon: 'cart', numberBadge: "7" }
+      	{ title: 'Accueil', component: HomePage, icon: 'home' },
+				{ title: 'Recettes', component: RecipePage, icon: 'bookmarks' },
+				{ title: 'Produits', component: ProductsPage, icon: 'nutrition' },
+				{ title: 'Repas', component: MealPage, icon: 'restaurant' },
+				{ title: 'Paramètres', component: SettingsPage, icon: 'settings' }
     	];
 
     });
