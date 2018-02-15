@@ -1,5 +1,5 @@
 <ion-header>
-	<ion-navbar>
+	<ion-navbar color="theme-color">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -15,7 +15,12 @@
 <ion-content>
 
 	<ion-card style="height: 220px;">
-		<ion-card-header>Nouveautées</ion-card-header>
+		<ion-card-header>
+			Nouveautées
+			<button ion-button clear icon-only color="theme-color" style="padding: 26px; text-align:right;">
+	      <ion-icon name='list' is-active="false"></ion-icon>
+			</button>
+		</ion-card-header>
 		<ion-scroll scrollX="true" style="white-space: nowrap; height:180px;" (click)="goNewProduct()">
 			<div *ngFor="let product of products" style="display: inline-block">
 				<img src={{product.imgSrc}}>
