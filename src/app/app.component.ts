@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { Recipe_WelcomePage } from '../pages/recipe_welcome/recipe_welcome';
 import { ProductsPage } from '../pages/products/products';
 import { MealPage } from '../pages/meal/meal';
-import { BasketPage } from '../pages/basket/basket';
+import { SettingsPage } from '../pages/settings/settings';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class MyApp {
 
 	@ViewChild(Nav) nav: Nav;
   rootPage:any = HomePage;
-	pages: Array<{title: string, component: any, icon: string, numberBadge: string}>;
+	pages: Array<{title: string, component: any, icon: string }>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen/*, badge: Badge*/) {
     platform.ready().then(() => {
