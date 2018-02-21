@@ -1,0 +1,41 @@
+<ion-header>
+	<ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Recettes</ion-title>
+		<ion-buttons end>
+			<button ion-button clear icon-only  (click)="goSettings()">
+	      <ion-icon name='settings' is-active="false"></ion-icon>
+			</button>
+		</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<!-- Different cards to display content -->
+	<ion-card>
+		<!-- All recipes -->
+		<ion-card-header>Toutes les recettes<!-- Explorer notre savoir --></ion-card-header>
+		<ion-card-content>
+
+		</ion-card-content>
+	</ion-card>
+	<ion-card>
+	<!-- New recipes -->
+		<ion-card-header>Nouveautées<!-- Y'a du nouveau --></ion-card-header>
+		<ion-card-content>
+		</ion-card-content>
+	</ion-card>
+	<ion-card>
+	<!-- Season recipe -->
+		<ion-card-header>Recettes de saison<!-- C'est la saison! --></ion-card-header>
+		<ion-card-content>
+		</ion-card-content>
+	</ion-card>
+
+
+  <ion-fab right bottom>
+    <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>
