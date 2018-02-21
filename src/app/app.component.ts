@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //import { Badge } from '@ionic-native/badge';
 
 import { HomePage } from '../pages/home/home';
-import { RecipePage } from '../pages/recipe/recipe';
+import { Recipe_WelcomePage } from '../pages/recipe_welcome/recipe_welcome';
 import { ProductsPage } from '../pages/products/products';
 import { MealPage } from '../pages/meal/meal';
 import { BasketPage } from '../pages/basket/basket';
@@ -33,7 +33,7 @@ export class MyApp {
 
 			this.pages = [
       	{ title: 'Accueil', component: HomePage, icon: 'home', numberBadge: "7" },
-				{ title: 'Recettes', component: RecipePage, icon: 'bookmarks', numberBadge: "7" },
+				{ title: 'Recettes', component: Recipe_WelcomePage, icon: 'bookmarks', numberBadge: "7" },
 				{ title: 'Produits', component: ProductsPage, icon: 'nutrition', numberBadge: "7" },
 				{ title: 'Repas', component: MealPage, icon: 'restaurant', numberBadge: "7" },
 				{ title: 'Panier', component: BasketPage, icon: 'cart', numberBadge: "7" }
