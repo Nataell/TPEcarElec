@@ -5,12 +5,13 @@ import { SettingsPage } from '../settings/settings';
 
 @Component({
   selector: 'page-recipe',
-  templateUrl: 'recipe.html'
+  templateUrl: 'recipe_welcome.html'
 })
-export class RecipePage {
+export class Recipe_WelcomePage {
+	recipes: Array<{name: string, imgSrc: string}>;
 
   constructor(public navCtrl: NavController) {
-
+		this.recipes = { name: "cookies", imgSrc: ""}
   }
 
 	goSettings(){

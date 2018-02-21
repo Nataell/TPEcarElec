@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { RecipePage } from '../pages/recipe/recipe';
+import { Recipe_WelcomePage } from '../pages/recipe_welcome/recipe_welcome';
 import { ProductsPage } from '../pages/products/products';
 import { SettingsPage } from '../pages/settings/settings';
 import { MealPage } from '../pages/meal/meal';
@@ -16,7 +16,7 @@ import { BasketPage } from '../pages/basket/basket';
   declarations: [
     MyApp,
     HomePage,
-		RecipePage,
+		Recipe_WelcomePage,
 		ProductsPage,
 		SettingsPage,
 		MealPage,
@@ -30,7 +30,7 @@ import { BasketPage } from '../pages/basket/basket';
   entryComponents: [
     MyApp,
     HomePage,
-		RecipePage,
+		Recipe_WelcomePage,
 		ProductsPage,
 		SettingsPage,
 		MealPage,
