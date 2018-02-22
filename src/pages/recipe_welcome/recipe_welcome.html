@@ -1,33 +1,61 @@
 <ion-header>
-	<ion-navbar>
+	<ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Recettes</ion-title>
 		<ion-buttons end>
 			<button ion-button clear icon-only  (click)="goSettings()">
-	      <ion-icon name='settings' is-active="false"></ion-icon>
+				<ion-icon name='search' is-active="false"></ion-icon>
+			</button>
+			<button ion-button clear icon-only  (click)="goSettings()">
+	      <ion-icon name='cart' is-active="false"></ion-icon>
 			</button>
 		</ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content no-padding>
 	<!-- Different cards to display content -->
-	<ion-card>
+	<ion-card class=".ion-cardSize">
 		<!-- All recipes -->
 		<ion-card-header>Toutes les recettes<!-- Explorer notre savoir --></ion-card-header>
 		<ion-card-content>
-
+			<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
+				<ion-card *ngFor="let recipe of recipes" class="singleRecipe" padding-horizontal no-margin (click)="showRecipe($recipe)">
+					<img src={{recipe.imgSrc}}>
+					<ion-card-content no-padding margin-top>
+					<ion-grid no-padding>
+						<ion-row>
+							<ion-col no-padding text-uppercase col-8>
+							{{recipe.name}}
+							</ion-col>
+							<ion-col no-padding text-right>
+							<ion-icon color="primary" name="star"></ion-icon>{{recipe.note}}
+							</ion-col>
+						</ion-row>
+						<ion-row>
+							<ion-col col-6 no-padding>
+							{{recipe.difficulty}}
+							</ion-col>
+							<ion-col no-padding text-right>
+							<ion-icon color="primary" name="time"></ion-icon>{{recipe.duration}}
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+					</ion-card-content>
+				</ion-card>
+			</ion-scroll>
 		</ion-card-content>
 	</ion-card>
-	<ion-card>
+
+	<ion-card class=".ion-cardSize">
 	<!-- New recipes -->
 		<ion-card-header>Nouveautées<!-- Y'a du nouveau --></ion-card-header>
 		<ion-card-content>
 		</ion-card-content>
 	</ion-card>
-	<ion-card>
+	<ion-card class=".ion-cardSize">
 	<!-- Season recipe -->
 		<ion-card-header>Recettes de saison<!-- C'est la saison! --></ion-card-header>
 		<ion-card-content>
@@ -36,6 +64,6 @@
 
 
   <ion-fab right bottom>
-    <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab color="light"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 </ion-content>
