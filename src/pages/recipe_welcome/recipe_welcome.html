@@ -12,22 +12,49 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content no-padding>
 	<!-- Different cards to display content -->
-	<ion-card>
+	<ion-card class=".ion-cardSize">
 		<!-- All recipes -->
 		<ion-card-header>Toutes les recettes<!-- Explorer notre savoir --></ion-card-header>
 		<ion-card-content>
-
+			<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
+				<ion-card *ngFor="let recipe of recipes" class="singleRecipe" padding-horizontal no-margin>
+					<ion-card-content no-padding>
+					<img src={{recipe.imgSrc}}>
+					</ion-card-content>
+					<ion-card-content no-padding margin-top>
+					<ion-grid no-padding>
+						<ion-row>
+							<ion-col no-padding text-uppercase col-8>
+							{{recipe.name}}
+							</ion-col>
+							<ion-col no-padding text-right>
+							<ion-icon name="star"></ion-icon>3.5
+							</ion-col>
+						</ion-row>
+						<ion-row>
+							<ion-col col-6 no-padding>
+							Facile
+							</ion-col>
+							<ion-col no-padding text-right>
+							<ion-icon name="time"></ion-icon>25m
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+					</ion-card-content>
+				</ion-card>
+			</ion-scroll>
 		</ion-card-content>
 	</ion-card>
-	<ion-card>
+
+	<ion-card class=".ion-cardSize">
 	<!-- New recipes -->
 		<ion-card-header>Nouveautées<!-- Y'a du nouveau --></ion-card-header>
 		<ion-card-content>
 		</ion-card-content>
 	</ion-card>
-	<ion-card>
+	<ion-card class=".ion-cardSize">
 	<!-- Season recipe -->
 		<ion-card-header>Recettes de saison<!-- C'est la saison! --></ion-card-header>
 		<ion-card-content>

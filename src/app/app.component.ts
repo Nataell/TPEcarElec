@@ -10,7 +10,7 @@ import { Recipe_WelcomePage } from '../pages/recipe_welcome/recipe_welcome';
 import { ProductsPage } from '../pages/products/products';
 import { MealPage } from '../pages/meal/meal';
 import { SettingsPage } from '../pages/settings/settings';
-
+import { BasketPage } from '../pages/basket/basket';
 
 @Component({
   templateUrl: 'app.html'
@@ -32,11 +32,11 @@ export class MyApp {
 			//this.badge.set(5);
 
 			this.pages = [
-      	{ title: 'Accueil', component: HomePage, icon: 'home', numberBadge: "7" },
-				{ title: 'Recettes', component: Recipe_WelcomePage, icon: 'bookmarks', numberBadge: "7" },
-				{ title: 'Produits', component: ProductsPage, icon: 'nutrition', numberBadge: "7" },
-				{ title: 'Repas', component: MealPage, icon: 'restaurant', numberBadge: "7" },
-				{ title: 'Panier', component: BasketPage, icon: 'cart', numberBadge: "7" }
+      	{ title: 'Accueil', component: HomePage, icon: 'home'},
+				{ title: 'Recettes', component: Recipe_WelcomePage, icon: 'bookmarks'},
+				{ title: 'Produits', component: ProductsPage, icon: 'nutrition'},
+				{ title: 'Repas', component: MealPage, icon: 'restaurant'},
+				{ title: 'Panier', component: BasketPage, icon: 'cart'}
     	];
 
     });
