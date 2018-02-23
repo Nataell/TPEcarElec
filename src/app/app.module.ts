@@ -11,6 +11,7 @@ import { ProductsPage } from '../pages/products/products';
 import { SettingsPage } from '../pages/settings/settings';
 import { MealPage } from '../pages/meal/meal';
 import { BasketPage } from '../pages/basket/basket';
+import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BasketPage } from '../pages/basket/basket';
 		ProductsPage,
 		SettingsPage,
 		MealPage,
-		BasketPage
+		BasketPage,
+		SingleRecipePage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { BasketPage } from '../pages/basket/basket';
 		ProductsPage,
 		SettingsPage,
 		MealPage,
-		BasketPage
+		BasketPage,
+		SingleRecipePage
   ],
   providers: [
     StatusBar,
