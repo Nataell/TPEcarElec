@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { BasketPage } from '../basket/basket';
+import { NewRecipePage } from '../new-recipe/new-recipe';
 
 @Component({
   selector: 'page-recipe',
@@ -23,5 +24,13 @@ export class Recipe_WelcomePage {
 
 	goBasket(){
 		this.navCtrl.push(BasketPage);
+	}
+
+	goNewRecipe(){
+		this.navCtrl.push(NewRecipePage);
+	}
+
+	showRecipe(recipeId){
+		console.log("Clicked on recipe with id: "+recipeId);
 	}
 }

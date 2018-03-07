@@ -12,6 +12,7 @@ import { MealPage } from '../pages/meal/meal';
 import { SettingsPage } from '../pages/settings/settings';
 import { BasketPage } from '../pages/basket/basket';
 import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
+import { NewRecipePage } from '../pages/new-recipe/new-recipe';
 
 @Component({
   templateUrl: 'app.html'

@@ -1,0 +1,83 @@
+<!--
+  Generated template for the NewRecipePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>Nouvelle recette</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+	<ion-item-group>
+			<ion-item>
+				<ion-label stacked>Nom de la recette</ion-label>
+				<ion-input></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label stacked>Nombre de personnes</ion-label>
+				<ion-input></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label>Image</ion-label>
+				<ion-toggle [(ngModel)]="useImage"></ion-toggle>
+			</ion-item>
+			<ion-item>
+				<ion-grid>
+					<ion-row>
+						<ion-col><button [attr.disabled]="useImage? null : ''" ion-button block icon-only>
+				      <ion-icon name='link'></ion-icon>
+						</button></ion-col>
+						<ion-col><button [attr.disabled]="useImage? null : ''" ion-button block icon-only>
+							<ion-icon name='camera'></ion-icon>
+						</button></ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-item>
+	</ion-item-group>
+	<ion-list radio-group>
+			<ion-list-header no-margin>Difficulté</ion-list-header>
+			<ion-item>
+				<ion-label>Facile</ion-label>
+				<ion-radio value="easy"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label>Moyen</ion-label>
+				<ion-radio value="medium"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label>Difficile</ion-label>
+				<ion-radio value="hard"></ion-radio>
+			</ion-item>
+	</ion-list>
+	<ion-list radio-group no-margin>
+			<ion-list-header no-margin>Coût</ion-list-header>
+			<ion-item>
+				<ion-label>Bon marché</ion-label>
+				<ion-radio value="goodPrice"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label>Flexible</ion-label>
+				<ion-radio value="medium"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label>Cher</ion-label>
+				<ion-radio value="hard"></ion-radio>
+			</ion-item>
+	</ion-list>
+	<ion-item-group>
+		<ion-item>
+			<ion-label stacked>Temps de préparation</ion-label>
+			<ion-input></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label stacked>Temps de cuisson</ion-label>
+			<ion-input></ion-input>
+		</ion-item>
+	</ion-item-group>
+</ion-content>

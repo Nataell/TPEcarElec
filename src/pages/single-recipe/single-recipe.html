@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Cookies</ion-title>
+    <ion-title>{{m_recipeInfo.name}}</ion-title>
 		<ion-buttons end>
 			<button ion-button clear icon-only  (click)="goSettings()">
 	      <ion-icon name='cart' is-active="false"></ion-icon>
@@ -13,6 +13,57 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content no-padding>
+	<ion-card>
+		<img src={{m_recipeInfo.imgUrl}}>
+		<ion-card-content no-padding>
+			<ion-grid>
+				<ion-row>
+					<ion-col col-6>
+						Proposée par {{m_recipeInfo.author}}
+					</ion-col>
+					<ion-col *ngIf="m_recipeInfo.people=='1'" text-right>
+						<ion-icon name="person" color="primary"></ion-icon> {{m_recipeInfo.people}} personne
+					</ion-col>
+					<ion-col *ngIf="m_recipeInfo.people!='1'" text-right>
+						<ion-icon name="people" color="primary"></ion-icon> {{m_recipeInfo.people}} personnes
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-4>
+						<ion-icon color="primary" name="time"></ion-icon> {{m_recipeInfo.time}} m
+					</ion-col>
+					<ion-col text-center>
+					{{m_recipeInfo.difficulty}}
+					</ion-col>
+					<ion-col col-4 text-right>
+					<ion-icon name="logo-usd" color="primary"></ion-icon> {{m_recipeInfo.priceCat}}
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-card-content>
+</ion-card>
+<ion-card>
+	<ion-card-header>
+	Ingrédients
+	</ion-card-header>
+	<ion-list>
+		<ion-item *ngFor="let ingredient of m_ingredientList">
+			<h2>{{ingredient.name}}</h2>
+			<p>Quantité: {{ingredient.quantity}}</p>
+			<button ion-button clear item-end><ion-icon name="search" color="primary"></ion-icon></button>
+		</ion-item>
+	</ion-list>
+</ion-card>
+<ion-card>
+	<ion-card-header>
+	Instructions
+	</ion-card-header>
+	<ion-list text-wrap>
+		<ion-item *ngFor="let step of m_stepList; let i = index">
+			<h2>Étape {{i+1}}: </h2>
+			<p>{{step}}</p>
+		</ion-item>
+	</ion-list>
+</ion-card>
 </ion-content>
