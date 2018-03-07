@@ -1,20 +1,26 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { BasketPage } from '../basket/basket';
+/**
+ * Generated class for the NewRecipePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
 
+@IonicPage()
 @Component({
-  selector: 'page-single-recipe',
-  templateUrl: 'single-recipe.html',
+  selector: 'page-new-recipe',
+  templateUrl: 'new-recipe.html',
 })
-
-export class SingleRecipePage {
-	m_recipeInfo: {name: string, imgUrl: string, author: string, people: string, time: string, difficulty: string, priceCat: string};
+export class NewRecipePage {
+	useImage: boolean;
 	m_ingredientList: Array<{name: string, quantity: string}>;
 	m_stepList: Array<string>;
 
-  constructor(public navCtrl: NavController) {
-		this.m_recipeInfo = {name: "Croque Madame", imgUrl: "https://images.unsplash.com/photo-1465014925804-7b9ede58d0d7?ixlib=rb-0.3.5&s=7ec7b3d5920bc7476bf497f34e91413b&auto=format&fit=crop&w=711&q=80", author: "EggMan", people: "1", time: "15", difficulty: "Facile", priceCat: "Bon Marché"};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+		this.useImage=false;
 		this.m_ingredientList = [
 			{name: "Pain de mie", quantity: "2 tranches"},
 			{name: "Œufs", quantity: "1"},
@@ -27,7 +33,8 @@ export class SingleRecipePage {
 		];
   }
 
-	goBasket(){
-		this.navCtrl.push(BasketPage);
-	}
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad NewRecipePage');
+  }
+
 }
