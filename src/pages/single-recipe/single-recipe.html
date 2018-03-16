@@ -44,6 +44,8 @@
 		</ion-card-content>
 </ion-card>
 <ion-card>
+	<ion-slides pager>
+	<ion-slide>
 	<ion-card-header>
 	Ingrédients
 	</ion-card-header>
@@ -54,8 +56,8 @@
 			<button ion-button clear item-end><ion-icon name="search" color="primary"></ion-icon></button>
 		</ion-item>
 	</ion-list>
-</ion-card>
-<ion-card>
+	</ion-slide>
+	<ion-slide>
 	<ion-card-header>
 	Instructions
 	</ion-card-header>
@@ -65,5 +67,7 @@
 			<p>{{step}}</p>
 		</ion-item>
 	</ion-list>
+	</ion-slide>
+	</ion-slides>
 </ion-card>
 </ion-content>

@@ -37,4 +37,7 @@ export class NewRecipePage {
     console.log('ionViewDidLoad NewRecipePage');
   }
 
+	goToIngredients() {
+		console.log("change content to list ingredients");
+	}
 }
