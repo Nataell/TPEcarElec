@@ -12,7 +12,9 @@ import { MealPage } from '../pages/meal/meal';
 import { SettingsPage } from '../pages/settings/settings';
 import { BasketPage } from '../pages/basket/basket';
 import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
-import { NewRecipePage } from '../pages/new-recipe/new-recipe';
+import { NewRecipeBasisPage } from '../pages/new-recipe-basis/new-recipe-basis';
+import { NewRecipeIngredientsPage } from '../pages/new-recipe-ingredients/new-recipe-ingredients';
+import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
 
 @Component({
   templateUrl: 'app.html'
@@ -58,8 +60,13 @@ export class MyApp {
 >>>>>>> 16f768e... Modify recipe ui
 =======
 				{ title: 'Panier', component: BasketPage, icon: 'cart'},
+<<<<<<< HEAD
 				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'cart'}
 >>>>>>> 1a1db1c... Improve recipe ui. Add some colors on src/theme/variables to fit with material design. Add a new page to test a single recipe design
+=======
+				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'alert'},
+        { title: 'ListeRecipe', component: SingleRecipePage, icon: 'alert'}
+>>>>>>> 25c3f95... Add different page for recipe creation and improve UI
     	];
 
     });

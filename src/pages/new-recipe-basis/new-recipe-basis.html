@@ -14,7 +14,6 @@ Ionic pages and navigation.
 
 
 <ion-content no-padding>
-	<ion-card padding-bottom>
 		<ion-card-header>Informations Basiques</ion-card-header>
 		<ion-item-group>
 			<ion-item>
@@ -72,7 +71,7 @@ Ionic pages and navigation.
 				<ion-radio value="hard"></ion-radio>
 			</ion-item>
 		</ion-list>
-		<ion-item-group>
+		<ion-item-group padding-bottom margin-bottom>
 			<ion-item>
 				<ion-label stacked>Temps de préparation (minutes)</ion-label>
 				<ion-input type="number"></ion-input>
@@ -82,55 +81,8 @@ Ionic pages and navigation.
 				<ion-input type="number"></ion-input>
 			</ion-item>
 		</ion-item-group>
-	</ion-card>
-	<ion-card>
-		<ion-card-header>Ingrédients</ion-card-header>
-		<ion-item-group>
-			<ion-item>
-				<ion-label stacked>Nom de l'ingrédient</ion-label>
-				<ion-input type="text"></ion-input>
-			</ion-item>
-			<ion-item>
-				<ion-label stacked>Quantité (avec l'unité)</ion-label>
-				<ion-input></ion-input>
-			</ion-item>
-			<ion-item>
-				<button ion-button block icon-only><ion-icon name="add"></ion-icon></button>
-			</ion-item>
-		</ion-item-group>
-		<ion-list text-wrap>
-			<ion-item-sliding *ngFor="let ingredient of m_ingredientList">
-				<ion-item>
-					<h2>{{ingredient.name}}</h2>
-					<p>{{ingredient.quantity}}</p>
-				</ion-item>
-				<ion-item-options side="right">
-					<button ion-button color="danger">
-						<ion-icon name="trash"></ion-icon>
-						supprimer
-					</button>
-					<button ion-button color="primary">
-						<ion-icon name="create"></ion-icon>
-						modifier
-					</button>
-				</ion-item-options>
-			</ion-item-sliding>
-		</ion-list>
-	</ion-card>
-	<ion-card>
-		<ion-card-header>Étapes</ion-card-header>
-		<ion-item-group>
-			<ion-item>
-				<ion-textarea placeholder="Décrivez votre étape"></ion-textarea>
-			</ion-item>
-			<ion-item>
-				<button ion-button block icon-only><ion-icon name="add"></ion-icon></button>
-			</ion-item>
-		</ion-item-group>
-		<ion-list margin-vertical text-wrap reorder="true">
-				<ion-item *ngFor="let step of m_stepList">
-					<p>{{step}}</p>
-				</ion-item>
-		</ion-list>
-	</ion-card>
+		<button ion-button block icon-end (click)="goToIngredients()">
+			Ingrédients
+			<ion-icon name="arrow-forward"></ion-icon>
+		</button>
 </ion-content>
