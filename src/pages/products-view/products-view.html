@@ -1,0 +1,61 @@
+<ion-header>
+	<ion-navbar color="theme-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{titlePage}}</ion-title>
+		<ion-buttons end>
+			<button ion-button clear icon-only (click)="goBasket()"	>
+	      <ion-icon name='cart' is-active="false"></ion-icon>
+			</button>
+		</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-card style="background-color:white;">
+		<img src={{productSingle.imgSrc}}>
+			<ion-card-content no-padding>
+				<ion-grid>
+					<ion-row>
+						<ion-col col-6>
+							Disponible chez {{productSingle.seller}}
+						</ion-col>
+						<ion-col text-right>
+							PRODUIT DE SAISON
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col col-4>
+							Quantité : {{productSingle.quantity}}
+						</ion-col>
+						<ion-col text-center>
+							TOTO
+						</ion-col>
+						<ion-col col-4 text-right>
+							€{{productSingle.price}}/U
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-card-content>
+			<ion-grid>
+				<ion-row>
+					<ion-col col-6>
+						<ion-item>
+							<ion-label stacked>Quantité voulue :</ion-label>
+							<ion-input type="number" min="1" max="{{productSingle.quantity}}"></ion-input>
+						</ion-item>
+					</ion-col>
+					<ion-col>
+						<button ion-button full>
+							Acheter
+							<ion-icon name="basket"></ion-icon>
+						</button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+	</ion-card>
+
+</ion-content>
