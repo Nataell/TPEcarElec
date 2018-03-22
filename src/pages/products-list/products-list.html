@@ -1,0 +1,27 @@
+<ion-header>
+	<ion-navbar color="theme-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{titlePage}}</ion-title>
+		<ion-buttons end>
+			<button ion-button clear icon-only (click)="goBasket()"	>
+	      <ion-icon name='cart' is-active="false"></ion-icon>
+			</button>
+		</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list>
+  	<ion-item *ngFor="let product of products">
+    	<ion-thumbnail item-start>
+      	<img src={{product.imgSrc}}>
+	    </ion-thumbnail>
+	    <h2>{{product.imgTitle}}</h2>
+	    <p>{{product.seller}} • €{{product.price}}</p>
+	    <button ion-button clear item-end>View</button>
+  	</ion-item>
+	</ion-list>
+</ion-content>

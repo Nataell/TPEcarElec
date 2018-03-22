@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Recipe_WelcomePage } from '../pages/recipe_welcome/recipe_welcome';
 import { ProductsPage } from '../pages/products/products';
+import { ProductsListPage } from '../pages/products-list/products-list';
+import { ProductsViewPage } from '../pages/products-view/products-view';
 import { SettingsPage } from '../pages/settings/settings';
 import { MealPage } from '../pages/meal/meal';
 import { BasketPage } from '../pages/basket/basket';
@@ -20,6 +22,8 @@ import { NewRecipePage } from '../pages/new-recipe/new-recipe';
     HomePage,
 		Recipe_WelcomePage,
 		ProductsPage,
+		ProductsListPage,
+		ProductsViewPage,
 		SettingsPage,
 		MealPage,
 		BasketPage,
@@ -36,6 +40,8 @@ import { NewRecipePage } from '../pages/new-recipe/new-recipe';
     HomePage,
 		Recipe_WelcomePage,
 		ProductsPage,
+		ProductsListPage,
+		ProductsViewPage,
 		SettingsPage,
 		MealPage,
 		BasketPage,

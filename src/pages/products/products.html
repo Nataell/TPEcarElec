@@ -18,13 +18,13 @@
 		<!-- Different cards to display content -->
 		<ion-card style="height:250px; background-color:white;">
 			<!-- All recipes -->
-			<ion-grid no-padding>
+			<ion-grid no-padding (click)="goNewProduct('Nouveautées')">
 				<ion-row >
 					<ion-col>
 						<ion-card-header>Nouveautées</ion-card-header>
 					</ion-col>
 					<ion-col text-right>
-						<button ion-button no-margin padding-top clear icon-only color="theme-color">
+						<button ion-button no-margin padding-top clear icon-only color="theme-color" (click)="goNewProduct()">
 				      <ion-icon name='list' is-active="false"></ion-icon>
 						</button>
 					</ion-col>
@@ -32,7 +32,7 @@
 			</ion-grid>
 			<ion-card-content style="padding-top: 0">
 				<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
-					<ion-card *ngFor="let product of products" class="singleProduct" no-margin (click)="goNewProduct()" style="background-color: white">
+					<ion-card *ngFor="let product of products" class="singleProduct" no-margin (click)="goSingleProduct(product.imgTitle)" style="background-color: white">
 						<img src={{product.imgSrc}}>
 						<ion-card-content no-padding margin-top>
 							<ion-grid no-padding>
@@ -62,13 +62,13 @@
 
 	<ion-card style="height:250px; background-color:white;">
 		<!-- All recipes -->
-		<ion-grid no-padding>
+		<ion-grid no-padding (click)="goNewProduct('Les produits de saisons')">
 			<ion-row >
 				<ion-col>
 					<ion-card-header>Les produits de saisons</ion-card-header>
 				</ion-col>
 				<ion-col text-right>
-					<button ion-button no-margin padding-top clear icon-only color="theme-color">
+					<button ion-button no-margin padding-top clear icon-only color="theme-color" (click)="goNewProduct('Les produits de saisons')">
 						<ion-icon name='list' is-active="false"></ion-icon>
 					</button>
 				</ion-col>
@@ -76,7 +76,7 @@
 		</ion-grid>
 		<ion-card-content style="padding-top: 0">
 			<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
-				<ion-card *ngFor="let product of products" class="singleProduct" no-margin (click)="goSeasonProduct()" style="background-color: white">
+				<ion-card *ngFor="let product of products" class="singleProduct" no-margin (click)="goSingleProduct(product.imgTitle)" style="background-color: white">
 					<img src={{product.imgSrc}}>
 					<ion-card-content no-padding margin-top>
 						<ion-grid no-padding>
@@ -106,13 +106,13 @@
 
 	<ion-card style="height:250px; background-color:white;">
 		<!-- All recipes -->
-		<ion-grid no-padding>
+		<ion-grid no-padding (click)="goNewProduct('Tout les produits')">
 			<ion-row >
 				<ion-col>
 					<ion-card-header>Tout les produits</ion-card-header>
 				</ion-col>
 				<ion-col text-right>
-					<button ion-button no-margin padding-top clear icon-only color="theme-color">
+					<button ion-button no-margin padding-top clear icon-only color="theme-color" (click)="goNewProduct('Tout les produits')">
 						<ion-icon name='list' is-active="false"></ion-icon>
 					</button>
 				</ion-col>
@@ -120,7 +120,7 @@
 		</ion-grid>
 		<ion-card-content style="padding-top: 0">
 			<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
-				<ion-card *ngFor="let product of products" class="singleProduct" no-margin (click)="goAllProduct()" style="background-color: white">
+				<ion-card *ngFor="let product of products" class="singleProduct" no-margin (click)="goSingleProduct(product.imgTitle)" style="background-color: white">
 					<img src={{product.imgSrc}}>
 					<ion-card-content no-padding margin-top>
 						<ion-grid no-padding>

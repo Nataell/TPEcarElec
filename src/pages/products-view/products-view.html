@@ -1,0 +1,25 @@
+<ion-header>
+	<ion-navbar color="theme-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{titlePage}}</ion-title>
+		<ion-buttons end>
+			<button ion-button clear icon-only (click)="goBasket()"	>
+	      <ion-icon name='cart' is-active="false"></ion-icon>
+			</button>
+		</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-card>
+		<img src={{productSingle.imgSrc}}>
+			<ion-card-content no-padding>
+
+			</ion-card-content>
+	</ion-card>
+
+</ion-content>
