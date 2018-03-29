@@ -14,42 +14,138 @@
 
 <ion-content>
 
-	<ion-card style="height: 220px;">
-		<ion-card-header>
-			Nouveautées
-			<button ion-button clear icon-only color="theme-color" style="padding: 26px; text-align:right;">
-	      <ion-icon name='list' is-active="false"></ion-icon>
-			</button>
-		</ion-card-header>
-		<ion-scroll scrollX="true" style="white-space: nowrap; height:180px;" (click)="goNewProduct()">
-			<div *ngFor="let product of products" style="display: inline-block">
-				<img src={{product.imgSrc}}>
-				<p>{{product.imgTitle}}</p>
-				<div class="hline"></div>
-			</div>
-		</ion-scroll>
+	<ion-content no-padding>
+		<!-- Different cards to display content -->
+		<ion-card style="height:250px; background-color:white;">
+			<!-- All recipes -->
+			<ion-grid no-padding (click)="goNewProduct('Nouveautées')">
+				<ion-row >
+					<ion-col>
+						<ion-card-header><b>Nouveautées</b></ion-card-header>
+					</ion-col>
+					<ion-col text-right>
+						<button ion-button no-margin padding-top clear icon-only color="theme-color" (click)="goNewProduct()">
+				      <ion-icon name='list' is-active="false"></ion-icon>
+						</button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+			<ion-card-content style="padding-top: 0">
+				<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
+					<ion-card *ngFor="let product of products" class="singleProduct" no-margin (click)="goSingleProduct(product.imgTitle)" style="background-color: white">
+						<img src={{product.imgSrc}}>
+						<ion-card-content no-padding margin-top>
+							<ion-grid no-padding>
+								<ion-row>
+									<ion-col no-padding text-uppercase col-8>
+										{{product.imgTitle}}
+									</ion-col>
+									<ion-col no-padding text-right>
+										<!-- <ion-icon color="primary" name="star"></ion-icon> -->
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6 no-padding>
+										{{product.seller}}
+									</ion-col>
+									<ion-col no-padding text-right>
+										€{{product.price}}
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+							<div class="hline"></div>
+						</ion-card-content>
+					</ion-card>
+				</ion-scroll>
+			</ion-card-content>
+		</ion-card>
+
+	<ion-card style="height:250px; background-color:white;">
+		<!-- All recipes -->
+		<ion-grid no-padding (click)="goNewProduct('Les produits de saisons')">
+			<ion-row >
+				<ion-col>
+					<ion-card-header>Les produits de saisons</ion-card-header>
+				</ion-col>
+				<ion-col text-right>
+					<button ion-button no-margin padding-top clear icon-only color="theme-color" (click)="goNewProduct('Les produits de saisons')">
+						<ion-icon name='list' is-active="false"></ion-icon>
+					</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<ion-card-content style="padding-top: 0">
+			<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
+				<ion-card *ngFor="let product of products" class="singleProduct" no-margin (click)="goSingleProduct(product.imgTitle)" style="background-color: white">
+					<img src={{product.imgSrc}}>
+					<ion-card-content no-padding margin-top>
+						<ion-grid no-padding>
+							<ion-row>
+								<ion-col no-padding text-uppercase col-8>
+									{{product.imgTitle}}
+								</ion-col>
+								<ion-col no-padding text-right>
+									<!-- <ion-icon color="primary" name="star"></ion-icon> -->
+								</ion-col>
+							</ion-row>
+							<ion-row>
+								<ion-col col-6 no-padding>
+									{{product.seller}}
+								</ion-col>
+								<ion-col no-padding text-right>
+									€{{product.price}}
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+						<div class="hline"></div>
+					</ion-card-content>
+				</ion-card>
+			</ion-scroll>
+		</ion-card-content>
 	</ion-card>
 
-	<ion-card style="height: 220px;">
-		<ion-card-header>Les produits de saisons</ion-card-header>
-		<ion-scroll scrollX="true" style="white-space: nowrap; height:180px;" (click)="goSeasonProduct()">
-			<div *ngFor="let product of products" style="display: inline-block">
-				<img src={{product.imgSrc}}>
-				<p>{{product.imgTitle}}</p>
-				<div class="hline"></div>
-			</div>
-		</ion-scroll>
-	</ion-card>
-
-	<ion-card style="height: 220px;">
-		<ion-card-header>Tout les produits</ion-card-header>
-		<ion-scroll scrollX="true" style="white-space: nowrap; height:180px;" (click)="goAllProduct()">
-			<div *ngFor="let product of products" style="display: inline-block">
-				<img src={{product.imgSrc}}>
-				<p>{{product.imgTitle}}</p>
-				<div class="hline"></div>
-			</div>
-		</ion-scroll>
+	<ion-card style="height:250px; background-color:white;">
+		<!-- All recipes -->
+		<ion-grid no-padding (click)="goNewProduct('Tout les produits')">
+			<ion-row >
+				<ion-col>
+					<ion-card-header>Tout les produits</ion-card-header>
+				</ion-col>
+				<ion-col text-right>
+					<button ion-button no-margin padding-top clear icon-only color="theme-color" (click)="goNewProduct('Tout les produits')">
+						<ion-icon name='list' is-active="false"></ion-icon>
+					</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<ion-card-content style="padding-top: 0">
+			<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
+				<ion-card *ngFor="let product of products" class="singleProduct" no-margin (click)="goSingleProduct(product.imgTitle)" style="background-color: white">
+					<img src={{product.imgSrc}}>
+					<ion-card-content no-padding margin-top>
+						<ion-grid no-padding>
+							<ion-row>
+								<ion-col no-padding text-uppercase col-8>
+									{{product.imgTitle}}
+								</ion-col>
+								<ion-col no-padding text-right>
+									<!-- <ion-icon color="primary" name="star"></ion-icon> -->
+								</ion-col>
+							</ion-row>
+							<ion-row>
+								<ion-col col-6 no-padding>
+									{{product.seller}}
+								</ion-col>
+								<ion-col no-padding text-right>
+									€{{product.price}}
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+						<div class="hline"></div>
+					</ion-card-content>
+				</ion-card>
+			</ion-scroll>
+		</ion-card-content>
 	</ion-card>
 
 </ion-content>
