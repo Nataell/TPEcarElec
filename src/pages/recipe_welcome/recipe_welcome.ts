@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { BasketPage } from '../basket/basket';
-import { NewRecipePage } from '../new-recipe/new-recipe';
+import { NewRecipeBasisPage } from '../new-recipe-basis/new-recipe-basis';
 
 @Component({
   selector: 'page-recipe',
@@ -19,7 +19,6 @@ export class Recipe_WelcomePage {
 			{id: '3', name: "tiramisu", imgSrc: "http://www.labonnecuisine.be/wp-content/uploads/2015/10/tiramisu.jpg", note: "2.9", difficulty: "Moyen", duration: "40m"},
 			{id: '4', name: "pain Perdu", imgSrc: "http://www.recette-pain-perdu.fr/wp-content/uploads/2016/01/pain-perdu-a-la-poele-320x320.jpg", note: "3.5", difficulty: "Facile", duration: "20m"}
 		];
-
   }
 
 	goBasket(){
@@ -27,7 +26,7 @@ export class Recipe_WelcomePage {
 	}
 
 	goNewRecipe(){
-		this.navCtrl.push(NewRecipePage);
+		this.navCtrl.push(NewRecipeBasisPage);
 	}
 
 	showRecipe(recipeId){

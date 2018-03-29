@@ -12,7 +12,9 @@ import { MealPage } from '../pages/meal/meal';
 import { SettingsPage } from '../pages/settings/settings';
 import { BasketPage } from '../pages/basket/basket';
 import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
-import { NewRecipePage } from '../pages/new-recipe/new-recipe';
+import { NewRecipeBasisPage } from '../pages/new-recipe-basis/new-recipe-basis';
+import { NewRecipeIngredientsPage } from '../pages/new-recipe-ingredients/new-recipe-ingredients';
+import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
 
 @Component({
   templateUrl: 'app.html'
@@ -39,7 +41,8 @@ export class MyApp {
 				{ title: 'Produits', component: ProductsPage, icon: 'nutrition'},
 				{ title: 'Repas', component: MealPage, icon: 'restaurant'},
 				{ title: 'Panier', component: BasketPage, icon: 'cart'},
-				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'cart'}
+				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'alert'},
+        { title: 'ListeRecipe', component: SingleRecipePage, icon: 'alert'}
     	];
 
     });
