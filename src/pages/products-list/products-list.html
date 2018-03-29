@@ -15,7 +15,7 @@
 
 <ion-content padding>
 	<ion-list>
-  	<ion-item *ngFor="let product of products">
+  	<ion-item *ngFor="let product of products" (click)="goSingleProduct(product.imgTitle)">
     	<ion-thumbnail item-start>
       	<img src={{product.imgSrc}}>
 	    </ion-thumbnail>

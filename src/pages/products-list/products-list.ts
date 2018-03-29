@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { BasketPage } from '../basket/basket';
+import { ProductsViewPage } from '../products-view/products-view';
 
 @Component({
   selector: 'page-products-list',
@@ -25,6 +26,13 @@ export class ProductsListPage {
 
 	goBasket(){
 		this.navCtrl.push(BasketPage);
+	}
+
+	goSingleProduct(productName){
+		console.log(productName);
+		this.navCtrl.push(ProductsViewPage, {
+			title: productName
+		});
 	}
 
 }

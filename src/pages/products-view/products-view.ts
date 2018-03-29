@@ -10,10 +10,10 @@ import { BasketPage } from '../basket/basket';
 export class ProductsViewPage {
 
 	titlePage: String;
-	productSingle: { imgSrc: string, imgTitle: string, seller: string, price: string, seasonProduct: boolean };
+	productSingle: { imgSrc: string, imgTitle: string, seller: string, price: string, quantity: string, seasonProduct: boolean };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-		this.productSingle = { imgSrc: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg", imgTitle: "TOMATES", seller: "Auchan", price: "0.0", seasonProduct : true };
+		this.productSingle = { imgSrc: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg", imgTitle: "TOMATES", seller: "Auchan", price: "0.0", quantity : "4", seasonProduct : true };
 		this.titlePage = navParams.get("title");
   }
 
