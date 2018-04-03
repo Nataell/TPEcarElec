@@ -12,6 +12,138 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  La page des repas.
+<ion-content>
+
+	<ion-content no-padding>
+		<ion-card style="height:210px; background-color:white;">
+			<ion-grid no-padding (click)="goNewMeal('Nouveautées')">
+				<ion-row >
+					<ion-col>
+						<ion-card-header><b>Nouveautées</b></ion-card-header>
+					</ion-col>
+					<ion-col text-right>
+						<button ion-button no-margin padding-top clear icon-only color="theme-color">
+							<ion-icon name='list' is-active="false"></ion-icon>
+						</button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+			<ion-card-content style="padding-top: 0">
+				<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
+					<ion-card *ngFor="let meal of meals" class="singleMeal" no-margin (click)="goSingleMeal(meal.imgTitle)" style="background-color: white">
+						<img src={{meal.imgSrc}}>
+						<ion-card-content no-padding margin-top>
+							<ion-grid no-padding>
+								<ion-row>
+									<ion-col no-padding text-uppercase col-8>
+										<div class="cut-text-title">{{meal.imgTitle}}</div>
+									</ion-col>
+									<ion-col no-padding text-right>
+										<!-- <ion-icon color="primary" name="star"></ion-icon> -->
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6 no-padding>
+										<div class="cut-text-seller">{{meal.seller}}</div>
+									</ion-col>
+									<ion-col no-padding text-right>
+										€{{meal.price}}
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+							<div class="hline"></div>
+						</ion-card-content>
+					</ion-card>
+				</ion-scroll>
+			</ion-card-content>
+		</ion-card>
+
+	<ion-card style="height:210px; background-color:white;">
+		<!-- All recipes -->
+		<ion-grid no-padding (click)="goNewMeal('Les repas de saisons')">
+			<ion-row >
+				<ion-col>
+					<ion-card-header><b>Les repas de saisons</b></ion-card-header>
+				</ion-col>
+				<ion-col text-right>
+					<button ion-button no-margin padding-top clear icon-only color="theme-color" (click)="goNewMeal('Les repas de saisons')">
+						<ion-icon name='list' is-active="false"></ion-icon>
+					</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<ion-card-content style="padding-top: 0">
+			<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
+				<ion-card *ngFor="let meal of meals" class="singleMeal" no-margin (click)="goSingleMeal(meal.imgTitle)" style="background-color: white">
+					<img src={{meal.imgSrc}}>
+					<ion-card-content no-padding margin-top>
+						<ion-grid no-padding>
+							<ion-row>
+								<ion-col no-padding text-uppercase col-8>
+									<div class="cut-text-title">{{meal.imgTitle}}</div>
+								</ion-col>
+								<ion-col no-padding text-right>
+									<!-- <ion-icon color="primary" name="star"></ion-icon> -->
+								</ion-col>
+							</ion-row>
+							<ion-row>
+								<ion-col col-6 no-padding>
+									<div class="cut-text-seller">{{meal.seller}}</div>
+								</ion-col>
+								<ion-col no-padding text-right>
+									€{{meal.price}}
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+						<div class="hline"></div>
+					</ion-card-content>
+				</ion-card>
+			</ion-scroll>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card style="height:210px; background-color:white;">
+		<!-- All recipes -->
+		<ion-grid no-padding (click)="goNewMeal('Tout les repas')">
+			<ion-row >
+				<ion-col>
+					<ion-card-header><b>Tout les repas</b></ion-card-header>
+				</ion-col>
+				<ion-col text-right>
+					<button ion-button no-margin padding-top clear icon-only color="theme-color" (click)="goNewMeal('Tout les repas')">
+						<ion-icon name='list' is-active="false"></ion-icon>
+					</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<ion-card-content style="padding-top: 0">
+			<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
+				<ion-card *ngFor="let meal of meals" class="singleMeal" no-margin (click)="goSingleMeal(meal.imgTitle)" style="background-color: white">
+					<img src={{meal.imgSrc}}>
+					<ion-card-content no-padding margin-top>
+						<ion-grid no-padding>
+							<ion-row>
+								<ion-col no-padding text-uppercase col-8>
+									<div class="cut-text-title">{{meal.imgTitle}}</div>
+								</ion-col>
+								<ion-col no-padding text-right>
+									<!-- <ion-icon color="primary" name="star"></ion-icon> -->
+								</ion-col>
+							</ion-row>
+							<ion-row>
+								<ion-col col-6 no-padding>
+									<div class="cut-text-seller">{{meal.seller}}</div>
+								</ion-col>
+								<ion-col no-padding text-right>
+									€{{meal.price}}
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+						<div class="hline"></div>
+					</ion-card-content>
+				</ion-card>
+			</ion-scroll>
+		</ion-card-content>
+	</ion-card>
+
 </ion-content>

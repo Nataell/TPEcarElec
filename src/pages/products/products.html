@@ -12,19 +12,16 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-
 	<ion-content no-padding>
-		<!-- Different cards to display content -->
-		<ion-card style="height:250px; background-color:white;">
-			<!-- All recipes -->
+
+		<ion-card style="height:210px; background-color:white;">
 			<ion-grid no-padding (click)="goNewProduct('Nouveautées')">
 				<ion-row >
 					<ion-col>
 						<ion-card-header><b>Nouveautées</b></ion-card-header>
 					</ion-col>
 					<ion-col text-right>
-						<button ion-button no-margin padding-top clear icon-only color="theme-color" (click)="goNewProduct()">
+						<button ion-button no-margin padding-top clear icon-only color="theme-color">
 				      <ion-icon name='list' is-active="false"></ion-icon>
 						</button>
 					</ion-col>
@@ -38,7 +35,7 @@
 							<ion-grid no-padding>
 								<ion-row>
 									<ion-col no-padding text-uppercase col-8>
-										{{product.imgTitle}}
+										<div class="cut-text-title">{{product.imgTitle}}</div>
 									</ion-col>
 									<ion-col no-padding text-right>
 										<!-- <ion-icon color="primary" name="star"></ion-icon> -->
@@ -46,7 +43,7 @@
 								</ion-row>
 								<ion-row>
 									<ion-col col-6 no-padding>
-										{{product.seller}}
+										<div class="cut-text-seller">{{product.seller}}</div>
 									</ion-col>
 									<ion-col no-padding text-right>
 										€{{product.price}}
@@ -60,12 +57,12 @@
 			</ion-card-content>
 		</ion-card>
 
-	<ion-card style="height:250px; background-color:white;">
+	<ion-card style="height:210px; background-color:white;">
 		<!-- All recipes -->
 		<ion-grid no-padding (click)="goNewProduct('Les produits de saisons')">
 			<ion-row >
 				<ion-col>
-					<ion-card-header>Les produits de saisons</ion-card-header>
+					<ion-card-header><b>Les produits de saisons</b></ion-card-header>
 				</ion-col>
 				<ion-col text-right>
 					<button ion-button no-margin padding-top clear icon-only color="theme-color" (click)="goNewProduct('Les produits de saisons')">
@@ -82,7 +79,7 @@
 						<ion-grid no-padding>
 							<ion-row>
 								<ion-col no-padding text-uppercase col-8>
-									{{product.imgTitle}}
+									<div class="cut-text-title">{{product.imgTitle}}</div>
 								</ion-col>
 								<ion-col no-padding text-right>
 									<!-- <ion-icon color="primary" name="star"></ion-icon> -->
@@ -90,7 +87,7 @@
 							</ion-row>
 							<ion-row>
 								<ion-col col-6 no-padding>
-									{{product.seller}}
+									<div class="cut-text-seller">{{product.seller}}</div>
 								</ion-col>
 								<ion-col no-padding text-right>
 									€{{product.price}}
@@ -104,12 +101,12 @@
 		</ion-card-content>
 	</ion-card>
 
-	<ion-card style="height:250px; background-color:white;">
+	<ion-card style="height:210px; background-color:white;">
 		<!-- All recipes -->
 		<ion-grid no-padding (click)="goNewProduct('Tout les produits')">
 			<ion-row >
 				<ion-col>
-					<ion-card-header>Tout les produits</ion-card-header>
+					<ion-card-header><b>Tout les produits</b></ion-card-header>
 				</ion-col>
 				<ion-col text-right>
 					<button ion-button no-margin padding-top clear icon-only color="theme-color" (click)="goNewProduct('Tout les produits')">
@@ -126,7 +123,7 @@
 						<ion-grid no-padding>
 							<ion-row>
 								<ion-col no-padding text-uppercase col-8>
-									{{product.imgTitle}}
+									<div class="cut-text-title">{{product.imgTitle}}</div>
 								</ion-col>
 								<ion-col no-padding text-right>
 									<!-- <ion-icon color="primary" name="star"></ion-icon> -->
@@ -134,7 +131,7 @@
 							</ion-row>
 							<ion-row>
 								<ion-col col-6 no-padding>
-									{{product.seller}}
+									<div class="cut-text-seller">{{product.seller}}</div>
 								</ion-col>
 								<ion-col no-padding text-right>
 									€{{product.price}}

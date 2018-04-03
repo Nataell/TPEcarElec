@@ -10,7 +10,6 @@ import { Recipe_WelcomePage } from '../pages/recipe_welcome/recipe_welcome';
 import { ProductsPage } from '../pages/products/products';
 import { MealPage } from '../pages/meal/meal';
 import { SettingsPage } from '../pages/settings/settings';
-import { BasketPage } from '../pages/basket/basket';
 import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
 import { NewRecipeBasisPage } from '../pages/new-recipe-basis/new-recipe-basis';
 import { NewRecipeIngredientsPage } from '../pages/new-recipe-ingredients/new-recipe-ingredients';
@@ -60,9 +59,15 @@ export class MyApp {
 				{ title: 'Produits', component: ProductsPage, icon: 'nutrition'},
 				{ title: 'Repas', component: MealPage, icon: 'restaurant'},
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 				{ title: 'Panier', component: BasketPage, icon: 'cart'}
 >>>>>>> 16f768e... Modify recipe ui
 =======
+=======
+>>>>>>> 3733981... Basket is finish, some css change must be discuss.
+=======
+>>>>>>> 1a526c7... UNIFORMISE : recipe_welcome
 				{ title: 'Panier', component: BasketPage, icon: 'cart'},
 <<<<<<< HEAD
 				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'cart'}
@@ -76,7 +81,22 @@ export class MyApp {
         { title: 'ListeRecipe', component: SingleRecipePage, icon: 'alert'},
         { title: 'Compte', component: AccountPage, icon: 'contact'},
         { title: 'Paramètres', component: SettingsPage, icon: 'settings'}
+<<<<<<< HEAD
 >>>>>>> 9b2c160... Add setting, login, signin and account pages
+=======
+=======
+				{ title: 'Paramètres', component: SettingsPage, icon: 'settings'},
+				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'cart'}
+>>>>>>> 1d7f703... Basket is finish, some css change must be discuss.
+<<<<<<< HEAD
+>>>>>>> 3733981... Basket is finish, some css change must be discuss.
+=======
+=======
+				{ title: 'Paramètres', component: SettingsPage, icon: 'settings'},
+				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'alert'},
+        { title: 'ListeRecipe', component: SingleRecipePage, icon: 'alert'}
+>>>>>>> bbe51c8... UNIFORMISE : recipe_welcome
+>>>>>>> 1a526c7... UNIFORMISE : recipe_welcome
     	];
 
     });
