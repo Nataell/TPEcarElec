@@ -1,7 +1,7 @@
 page-products {
 	img{
 		object-fit: cover;
-	  height: 80px;
+	  height: 65px;
 	}
 	.ion-cardSize{
 		height: 500px;
@@ -9,7 +9,7 @@ page-products {
 	}
 
 	.singleProduct{
-		max-width: 100px;
+		max-width: 65px;
 		height: 200px;
 		display: inline-block;
 		box-shadow: none;
@@ -23,7 +23,23 @@ page-products {
 	.hline{
 		width:100%;
 		height:2px;
-		margin-top: 15px;
+		// margin-top: 15px;
 		background: #09A842;
+	}
+
+	.cut-text-title {
+		width : 68px;
+	  overflow:hidden;
+	  display:inline-block;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	}
+
+	.cut-text-seller {
+		width : 42px;
+	  overflow:hidden;
+	  display:inline-block;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
 	}
 }

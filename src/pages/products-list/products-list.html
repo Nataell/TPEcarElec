@@ -14,6 +14,9 @@
 
 
 <ion-content padding>
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+	    <ion-refresher-content></ion-refresher-content>
+	 </ion-refresher>
 	<ion-list>
   	<ion-item *ngFor="let product of products" (click)="goSingleProduct(product.imgTitle)">
     	<ion-thumbnail item-start>
@@ -21,7 +24,7 @@
 	    </ion-thumbnail>
 	    <h2>{{product.imgTitle}}</h2>
 	    <p>{{product.seller}} • €{{product.price}}</p>
-	    <button ion-button clear item-end>View</button>
+	    <button ion-button clear item-end>Détails</button>
   	</ion-item>
 	</ion-list>
 </ion-content>
