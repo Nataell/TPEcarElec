@@ -11,7 +11,7 @@ import { MealViewPage } from '../meal-view/meal-view';
 export class MealListPage {
 
 	titlePage: String;
-	products: Array<{ imgSrc: string, imgTitle: string, seller: string, price: string, seasonMeal: boolean }>;
+	meals: Array<{ imgSrc: string, imgTitle: string, seller: string, price: string, seasonMeal: boolean }>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 		this.meals = [
