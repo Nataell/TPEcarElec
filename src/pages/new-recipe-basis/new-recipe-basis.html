@@ -18,11 +18,11 @@ Ionic pages and navigation.
 		<ion-item-group>
 			<ion-item>
 				<ion-label stacked>Nom de la recette</ion-label>
-				<ion-input></ion-input>
+				<ion-input type="text" required></ion-input>
 			</ion-item>
 			<ion-item>
 				<ion-label stacked>Nombre de personnes</ion-label>
-				<ion-input type="number"></ion-input>
+				<ion-input type="number" required></ion-input>
 			</ion-item>
 			<ion-item>
 				<ion-label>Image</ion-label>
@@ -31,14 +31,18 @@ Ionic pages and navigation.
 			<ion-item>
 				<ion-grid>
 					<ion-row>
-						<ion-col><button [attr.disabled]="useImage? null : ''" ion-button block icon-only>
+						<ion-col><button [attr.disabled]="useImage? null : ''" ion-button block icon-only (click)="useLink = true">
 							<ion-icon name='link'></ion-icon>
 						</button></ion-col>
-						<ion-col><button [attr.disabled]="useImage? null : ''" ion-button block icon-only>
+						<ion-col><button [attr.disabled]="useImage? null : ''" ion-button block icon-only (click)="useLink = false">
 							<ion-icon name='camera'></ion-icon>
 						</button></ion-col>
 					</ion-row>
 				</ion-grid>
+			</ion-item>
+			<ion-item *ngIf="useLink">
+				<ion-label stacked>Lien</ion-label>
+				<ion-input type="url"></ion-input>
 			</ion-item>
 		</ion-item-group>
 		<ion-list radio-group>
