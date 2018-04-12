@@ -10,17 +10,24 @@
 			</button>
 		</ion-buttons>
   </ion-navbar>
-	<ion-toolbar no-border-top color="primary">
-		<ion-searchbar placeholder="Chercher une recette">
-		</ion-searchbar>
-	</ion-toolbar>
 </ion-header>
 
 <ion-content no-padding>
 	<!-- Different cards to display content -->
 	<ion-card class=".ion-cardSize">
 		<!-- All recipes -->
-		<ion-card-header>Toutes les recettes<!-- Explorer notre savoir --></ion-card-header>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col col-8>
+					<ion-card-header>Toutes les recettes<!-- Explorer notre savoir --></ion-card-header>
+				</ion-col>
+				<ion-col text-right>
+<!-- remove margin and set padding top to be aligned with the title -->
+					<button ion-button clear icon-only no-margin padding-top><ion-icon color="primary" name="list"></ion-icon></button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+
 		<ion-card-content>
 			<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
 				<ion-card *ngFor="let recipe of recipes" class="singleRecipe" padding-horizontal no-margin (click)="showRecipe(recipe.id)">

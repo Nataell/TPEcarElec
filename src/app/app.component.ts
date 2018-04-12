@@ -11,7 +11,9 @@ import { ProductsPage } from '../pages/products/products';
 import { MealPage } from '../pages/meal/meal';
 import { SettingsPage } from '../pages/settings/settings';
 import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
-import { NewRecipePage } from '../pages/new-recipe/new-recipe';
+import { NewRecipeBasisPage } from '../pages/new-recipe-basis/new-recipe-basis';
+import { NewRecipeIngredientsPage } from '../pages/new-recipe-ingredients/new-recipe-ingredients';
+import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
 
 @Component({
   templateUrl: 'app.html'
@@ -37,8 +39,14 @@ export class MyApp {
 				{ title: 'Recettes', component: Recipe_WelcomePage, icon: 'bookmarks'},
 				{ title: 'Produits', component: ProductsPage, icon: 'nutrition'},
 				{ title: 'Repas', component: MealPage, icon: 'restaurant'},
+<<<<<<< HEAD
 				{ title: 'Paramètres', component: SettingsPage, icon: 'settings'},
 				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'cart'}
+=======
+				{ title: 'Panier', component: BasketPage, icon: 'cart'},
+				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'alert'},
+        { title: 'ListeRecipe', component: SingleRecipePage, icon: 'alert'}
+>>>>>>> origin/dev-Tristan
     	];
 
     });

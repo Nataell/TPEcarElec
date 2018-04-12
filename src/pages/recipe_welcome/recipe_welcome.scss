@@ -1,8 +1,11 @@
 page-recipe {
 	img{
-		size: 100%;
+		object-fit: cover;
 		border-radius: 5px;
+		object-position: center;
+		height: 118px;
 	}
+
 	.ion-cardSize{
 		min-height: 30%;
 	}
