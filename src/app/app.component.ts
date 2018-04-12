@@ -39,14 +39,9 @@ export class MyApp {
 				{ title: 'Recettes', component: Recipe_WelcomePage, icon: 'bookmarks'},
 				{ title: 'Produits', component: ProductsPage, icon: 'nutrition'},
 				{ title: 'Repas', component: MealPage, icon: 'restaurant'},
-<<<<<<< HEAD
 				{ title: 'Paramètres', component: SettingsPage, icon: 'settings'},
-				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'cart'}
-=======
-				{ title: 'Panier', component: BasketPage, icon: 'cart'},
 				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'alert'},
         { title: 'ListeRecipe', component: SingleRecipePage, icon: 'alert'}
->>>>>>> origin/dev-Tristan
     	];
 
     });
