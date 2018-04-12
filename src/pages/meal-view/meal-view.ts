@@ -13,7 +13,7 @@ export class MealViewPage {
 	mealSingle: { imgSrc: string, imgTitle: string, seller: string, price: string, quantity: string, seasonMeal: boolean };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-		this.mealSingle = { imgSrc: "https://image.afcdn.com/recipe/20170112/28965_w1024h768c1cx1500cy1000.jpg", imgTitle: "CROQUE-MONSIEUR", seller: "Auchan", price: "0.0", seasonMeal : true };
+		this.mealSingle = { imgSrc: "https://image.afcdn.com/recipe/20170112/28965_w1024h768c1cx1500cy1000.jpg", imgTitle: "CROQUE-MONSIEUR", seller: "Auchan", price: "0.0", quantity: "3", seasonMeal : true };
 		this.titlePage = navParams.get("title");
   }
 

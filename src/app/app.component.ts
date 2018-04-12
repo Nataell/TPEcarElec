@@ -10,7 +10,6 @@ import { Recipe_WelcomePage } from '../pages/recipe_welcome/recipe_welcome';
 import { ProductsPage } from '../pages/products/products';
 import { MealPage } from '../pages/meal/meal';
 import { SettingsPage } from '../pages/settings/settings';
-import { BasketPage } from '../pages/basket/basket';
 import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
 import { NewRecipePage } from '../pages/new-recipe/new-recipe';
 
@@ -38,7 +37,7 @@ export class MyApp {
 				{ title: 'Recettes', component: Recipe_WelcomePage, icon: 'bookmarks'},
 				{ title: 'Produits', component: ProductsPage, icon: 'nutrition'},
 				{ title: 'Repas', component: MealPage, icon: 'restaurant'},
-				{ title: 'Panier', component: BasketPage, icon: 'cart'},
+				{ title: 'Paramètres', component: SettingsPage, icon: 'settings'},
 				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'cart'}
     	];
 
