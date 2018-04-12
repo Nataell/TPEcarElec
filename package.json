@@ -1,7 +1,7 @@
 {
   "name": "Amapp",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Damwee",
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
@@ -45,7 +45,7 @@
     "@ionic/app-scripts": "3.1.8",
     "typescript": "2.4.2"
   },
-  "description": "An Ionic project",
+  "description": "An application to sell and buy local food and make recipes.",
   "cordova": {
     "plugins": {
       "cordova-plugin-badge": {},
