@@ -15,6 +15,10 @@ import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
 import { NewRecipeBasisPage } from '../pages/new-recipe-basis/new-recipe-basis';
 import { NewRecipeIngredientsPage } from '../pages/new-recipe-ingredients/new-recipe-ingredients';
 import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
+import { AccountPage } from '../pages/account/account';
+import { LoginPage } from '../pages/login/login';
+import { AccountCreationPage } from '../pages/account-creation/account-creation';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -65,8 +69,14 @@ export class MyApp {
 >>>>>>> 1a1db1c... Improve recipe ui. Add some colors on src/theme/variables to fit with material design. Add a new page to test a single recipe design
 =======
 				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'alert'},
+<<<<<<< HEAD
         { title: 'ListeRecipe', component: SingleRecipePage, icon: 'alert'}
 >>>>>>> 25c3f95... Add different page for recipe creation and improve UI
+=======
+        { title: 'ListeRecipe', component: SingleRecipePage, icon: 'alert'},
+        { title: 'Compte', component: AccountPage, icon: 'contact'},
+        { title: 'Paramètres', component: SettingsPage, icon: 'settings'}
+>>>>>>> 9b2c160... Add setting, login, signin and account pages
     	];
 
     });

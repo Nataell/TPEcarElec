@@ -11,7 +11,7 @@ import { NewRecipeIngredientsPage } from '../new-recipe-ingredients/new-recipe-i
 
 @Component({
   selector: 'page-new-recipe-basis',
-  templateUrl: 'new-recipe-basis.html',
+  templateUrl: 'new-recipe-basis.html'
 })
 export class NewRecipeBasisPage {
 	useImage: boolean;
@@ -30,9 +30,4 @@ export class NewRecipeBasisPage {
 		console.log("change content to list ingredients");
     this.navCtrl.push(NewRecipeIngredientsPage,{},{animate:true,animation:'transition',duration:500,direction:'forward'});
 	}
-
-  showLinkInput() {
-    console.log("Show link input");
-    this.
-  }
 }

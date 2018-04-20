@@ -40,7 +40,7 @@ export class NewRecipeIngredientsPage {
 
   addNewIngredient(){
     console.log("Adding new ingredient");
-    if(this.m_ingredient.name!="" && this.m_ingredient.quantity){
+    if(this.m_ingredient.name && this.m_ingredient.quantity){
       var new_ingredient = {name: this.m_ingredient.name, quantity: this.m_ingredient.quantity};
       this.m_ingredientList.push(new_ingredient);
       this.m_ingredient.name = "";

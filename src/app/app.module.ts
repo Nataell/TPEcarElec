@@ -17,22 +17,28 @@ import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
 import { NewRecipeBasisPage } from '../pages/new-recipe-basis/new-recipe-basis';
 import { NewRecipeIngredientsPage } from '../pages/new-recipe-ingredients/new-recipe-ingredients';
 import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
+import { AccountPage } from '../pages/account/account';
+import { LoginPage } from '../pages/login/login';
+import { AccountCreationPage } from '../pages/account-creation/account-creation';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-		Recipe_WelcomePage,
-		ProductsPage,
-		ProductsListPage,
-		ProductsViewPage,
-		SettingsPage,
-		MealPage,
+    AccountPage,
+    AccountCreationPage,
 		BasketPage,
-		SingleRecipePage,
+    HomePage,
+    LoginPage,
+		MealPage,
+    MyApp,
 		NewRecipeBasisPage,
     NewRecipeIngredientsPage,
-    NewRecipeStepsPage
+    NewRecipeStepsPage,
+		ProductsListPage,
+		ProductsPage,
+		ProductsViewPage,
+		Recipe_WelcomePage,
+    SettingsPage,
+		SingleRecipePage
   ],
   imports: [
     BrowserModule,
@@ -40,19 +46,22 @@ import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    AccountCreationPage,
+    AccountPage,
+		BasketPage,
     HomePage,
-		Recipe_WelcomePage,
+    LoginPage,
+		MealPage,
+    MyApp,
+		NewRecipeBasisPage,
+    NewRecipeIngredientsPage,
+    NewRecipeStepsPage,
 		ProductsPage,
 		ProductsListPage,
 		ProductsViewPage,
-		SettingsPage,
-		MealPage,
-		BasketPage,
-		SingleRecipePage,
-		NewRecipeBasisPage,
-    NewRecipeIngredientsPage, 
-    NewRecipeStepsPage
+		Recipe_WelcomePage,
+    SettingsPage,
+		SingleRecipePage
   ],
   providers: [
     StatusBar,
