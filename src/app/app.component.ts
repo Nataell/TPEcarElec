@@ -15,6 +15,8 @@ import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
 import { NewRecipeBasisPage } from '../pages/new-recipe-basis/new-recipe-basis';
 import { NewRecipeIngredientsPage } from '../pages/new-recipe-ingredients/new-recipe-ingredients';
 import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
+import { AccountPage } from '../pages/account/account';
+import { LoginPage } from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
@@ -42,7 +44,9 @@ export class MyApp {
 				{ title: 'Repas', component: MealPage, icon: 'restaurant'},
 				{ title: 'Panier', component: BasketPage, icon: 'cart'},
 				{ title: 'RecetteTest', component: SingleRecipePage, icon: 'alert'},
-        { title: 'ListeRecipe', component: SingleRecipePage, icon: 'alert'}
+        { title: 'ListeRecipe', component: SingleRecipePage, icon: 'alert'},
+        { title: 'Compte', component: AccountPage, icon: 'contact'},
+        { title: 'Paramètres', component: SettingsPage, icon: 'settings'}
     	];
 
     });

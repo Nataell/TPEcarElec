@@ -17,6 +17,9 @@ import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
 import { NewRecipeBasisPage } from '../pages/new-recipe-basis/new-recipe-basis';
 import { NewRecipeIngredientsPage } from '../pages/new-recipe-ingredients/new-recipe-ingredients';
 import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
+import { SettingsPage } from '../pages/settings/settings';
+import { AccountPage } from '../pages/account/account';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
 		SingleRecipePage,
 		NewRecipeBasisPage,
     NewRecipeIngredientsPage,
-    NewRecipeStepsPage
+    NewRecipeStepsPage,
+    SettingsPage,
+    AccountPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -51,8 +57,11 @@ import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
 		BasketPage,
 		SingleRecipePage,
 		NewRecipeBasisPage,
-    NewRecipeIngredientsPage, 
-    NewRecipeStepsPage
+    NewRecipeIngredientsPage,
+    NewRecipeStepsPage,
+    SettingsPage,
+    AccountPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
