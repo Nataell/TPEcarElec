@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { AccountCreationPage } from '../account-creation/account-creation';
 import { AlertController } from 'ionic-angular';
 
 /**
@@ -26,6 +27,10 @@ export class AccountPage {
 
   openLogInPage(){
     this.navCtrl.push(LoginPage);
+  }
+
+  openCreateAccountPage(){
+    this.navCtrl.push(AccountCreationPage);
   }
 
   showLogout() {

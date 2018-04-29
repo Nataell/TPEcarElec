@@ -17,6 +17,8 @@ import { NewRecipeIngredientsPage } from '../pages/new-recipe-ingredients/new-re
 import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
+import { AccountCreationPage } from '../pages/account-creation/account-creation';
+
 
 @Component({
   templateUrl: 'app.html'

@@ -1,0 +1,41 @@
+<!--
+  Generated template for the AccountCreationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary" no-border-bottom>
+    <ion-title>Création de compte</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Nom</ion-label>
+      <ion-input type="text" required [(ngModel)]="lastName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Prénom</ion-label>
+      <ion-input type="text" required [(ngModel)]="firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Adresse e-mail</ion-label>
+      <ion-input type="mail" required [(ngModel)]="mail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Mot de passe</ion-label>
+      <ion-input type="password" required [(ngModel)]="pass"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Confirmation du mot de passe</ion-label>
+      <ion-input type="password" required [(ngModel)]="passConfirm"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button block icon-end (click)="accountCreation()">
+    Créer mon compte
+    <ion-icon name="check"></ion-icon>
+  </button>
+</ion-content>
