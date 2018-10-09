@@ -12,6 +12,8 @@ import { ProductsListPage } from '../pages/products-list/products-list';
 import { ProductsViewPage } from '../pages/products-view/products-view';
 import { SettingsPage } from '../pages/settings/settings';
 import { MealPage } from '../pages/meal/meal';
+import { MealListPage } from '../pages/meal-list/meal-list';
+import { MealViewPage } from '../pages/meal-view/meal-view';
 import { BasketPage } from '../pages/basket/basket';
 import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
 import { NewRecipeBasisPage } from '../pages/new-recipe-basis/new-recipe-basis';
@@ -29,7 +31,10 @@ import { AccountCreationPage } from '../pages/account-creation/account-creation'
     HomePage,
     LoginPage,
 		MealPage,
-    MyApp,
+		MealListPage,
+		MealViewPage,
+		BasketPage,
+		SingleRecipePage,
 		NewRecipeBasisPage,
     NewRecipeIngredientsPage,
     NewRecipeStepsPage,
@@ -59,9 +64,15 @@ import { AccountCreationPage } from '../pages/account-creation/account-creation'
 		ProductsPage,
 		ProductsListPage,
 		ProductsViewPage,
-		Recipe_WelcomePage,
-    SettingsPage,
-		SingleRecipePage
+		SettingsPage,
+		MealPage,
+		MealListPage,
+		MealViewPage,
+		BasketPage,
+		SingleRecipePage,
+		NewRecipeBasisPage,
+    NewRecipeIngredientsPage,
+    NewRecipeStepsPage
   ],
   providers: [
     StatusBar,

@@ -7,6 +7,46 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  La page panier.
+<ion-content padding >
+
+	<ion-list>
+	  <ion-item-sliding *ngFor="let purchase of purchases">
+	    <ion-item>
+	      <ion-thumbnail item-start>
+	        <img src={{purchase.imgSrc}}>
+	      </ion-thumbnail>
+	      <h2>{{purchase.imgTitle}}</h2>
+				<p>{{purchase.seller}} • €{{purchase.price}}</p>
+				<p item-end>X {{purchase.quantity}}</p>
+	    </ion-item>
+	    <ion-item-options side="right">
+	      <button ion-button color="primary" (click)="confirmAdd()">
+	        <ion-icon name="add"></ion-icon>
+	      </button>
+				<button ion-button color="danger" (click)="confirmDelete()">
+	        <ion-icon name="trash"></ion-icon>
+	      </button>
+	    </ion-item-options>
+	  </ion-item-sliding>
+	</ion-list>
+
 </ion-content>
+
+<ion-footer padding>
+
+	<ion-grid style="padding-top: 0px 	;">
+		<ion-row>
+			<ion-col>
+				<p><b>Total</b> :</p>
+			</ion-col>
+			<ion-col>
+				<p text-right>{{computeQuantity()}}€</p>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<button ion-button full>
+		Passer la commande
+		<ion-icon padding-left name="basket"></ion-icon>
+	</button>
+
+</ion-footer>

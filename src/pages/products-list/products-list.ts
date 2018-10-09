@@ -35,4 +35,12 @@ export class ProductsListPage {
 		});
 	}
 
+	doRefresh(refresher){
+		console.log("C'est frais mon gars !");
+	   setTimeout(() => {
+	     console.log("Plus que frais maintenant que c\'est terminé ! ");
+				refresher.complete();
+	   }, 2000);
+	}
+
 }
