@@ -16,6 +16,7 @@ import { NewRecipeStepsPage } from '../new-recipe-steps/new-recipe-steps';
 export class NewRecipeIngredientsPage {
   m_ingredientList: Array<{name: string, quantity: string}>;
   @ViewChild(Navbar) navBar: Navbar;
+  m_ingredient = {};
 
   constructor(public navCtrl: NavController) {
     this.m_ingredientList = [
@@ -35,5 +36,32 @@ export class NewRecipeIngredientsPage {
 
   goToSteps() {
     this.navCtrl.push(NewRecipeStepsPage,{},{animate:true,animation:'transition',duration:500,direction:'forward'});
+  }
+
+  addNewIngredient(){
+    console.log("Adding new ingredient");
+    if(this.m_ingredient.name!="" && this.m_ingredient.quantity){
+      var new_ingredient = {name: this.m_ingredient.name, quantity: this.m_ingredient.quantity};
+      this.m_ingredientList.push(new_ingredient);
+      this.m_ingredient.name = "";
+      this.m_ingredient.quantity = "";
+    }
+    else{
+      console.log("invalid data");
+      //display alert
+    }
+  }
+
+
+  deleteIngredient(ingredient){
+    console.log(ingredient);
+    var ingredientIndex = this.m_ingredientList.indexOf(ingredient);
+    this.m_ingredientList.splice(ingredientIndex,1);
+  }
+
+  modifyIngredient(ingredient){
+    this.m_ingredient.name = ingredient.name;
+    this.m_ingredient.quantity = ingredient.quantity;
+    this.deleteIngredient(ingredient);
   }
 }

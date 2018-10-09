@@ -16,28 +16,37 @@
   <ion-item-group>
     <ion-item>
       <ion-label stacked>Nom de l'ingrédient</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input [(ngModel)]="m_ingredient.name" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Quantité (avec l'unité)</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="m_ingredient.quantity" ></ion-input>
     </ion-item>
     <ion-item>
-      <button ion-button block icon-only><ion-icon name="add"></ion-icon></button>
+      <button ion-button block icon-only (click)="addNewIngredient()"><ion-icon name="add"></ion-icon></button>
     </ion-item>
   </ion-item-group>
   <ion-list text-wrap>
     <ion-item-sliding *ngFor="let ingredient of m_ingredientList">
       <ion-item>
-        <h2>{{ingredient.name}}</h2>
-        <p>{{ingredient.quantity}}</p>
+        <ion-grid no-padding no-margin>
+          <ion-row>
+            <ion-col col-8>
+              <h2>{{ingredient.name}}</h2>
+              <p>{{ingredient.quantity}}</p>
+            </ion-col>
+            <ion-col text-right align-self-center>
+              <ion-icon style="max-height: 2.4rem; font-size: 2.2rem;" ion-end name="more"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-item>
       <ion-item-options side="right">
-        <button ion-button color="danger">
+        <button ion-button color="danger" (click)="deleteIngredient(ingredient)">
           <ion-icon name="trash"></ion-icon>
           supprimer
         </button>
-        <button ion-button color="primary">
+        <button ion-button color="primary" (click)="modifyIngredient(ingredient)">
           <ion-icon name="create"></ion-icon>
           modifier
         </button>

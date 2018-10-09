@@ -15,14 +15,11 @@ import { NewRecipeIngredientsPage } from '../new-recipe-ingredients/new-recipe-i
 })
 export class NewRecipeBasisPage {
 	useImage: boolean;
-	m_ingredientList: Array<{name: string, quantity: string}>;
-	m_stepList: Array<string>;
+  useLink: boolean;
 
   constructor(public navCtrl: NavController) {
 		this.useImage=false;
-		this.m_stepList = [
-			"beurrez votre tranche de pain", "étalez la tranche de jambon sur votre tranche de pain", "placez vos trois tranches de fromage de chevre sur votre tranche de jambon", "fermez votre croque madame avec l'autre tranche de pain de mie", "ajouter du gruilère sur le dessus", "Vous pouvez ajouter l'œuf sur le pain du dessus", "Enfournez pendant 7 minutes"
-		];
+    this.useLink=false;
   }
 
   ionViewDidLoad() {
@@ -33,4 +30,9 @@ export class NewRecipeBasisPage {
 		console.log("change content to list ingredients");
     this.navCtrl.push(NewRecipeIngredientsPage,{},{animate:true,animation:'transition',duration:500,direction:'forward'});
 	}
+
+  showLinkInput() {
+    console.log("Show link input");
+    this.
+  }
 }
