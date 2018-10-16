@@ -56,6 +56,6 @@ export class NewRecipeStepsPage {
 
   modifyStep(step){
     this.m_step = step;
-    removeStep(step);
+    this.removeStep(step);
   }
 }

@@ -31,6 +31,7 @@ import { AccountCreationPage } from '../pages/account-creation/account-creation'
     HomePage,
     LoginPage,
 		MealPage,
+		MyApp,
 		MealListPage,
 		MealViewPage,
 		BasketPage,

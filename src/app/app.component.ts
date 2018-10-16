@@ -18,6 +18,8 @@ import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { AccountCreationPage } from '../pages/account-creation/account-creation';
 
+import { timer } from 'rxjs/observable/timer';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -28,6 +30,8 @@ export class MyApp {
   rootPage:any = HomePage;
 	pages: Array<{title: string, component: any, icon: string }>;
 
+	showSplash = true;
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen/*, badge: Badge*/) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -35,6 +39,8 @@ export class MyApp {
       statusBar.backgroundColorByHexString('#007713');
 			statusBar.show();
       splashScreen.hide();
+
+			timer(3000).subscribe(() => this.showSplash = false)
 
 			//this.badge.set(5);
 
