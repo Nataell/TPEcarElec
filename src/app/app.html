@@ -1,5 +1,24 @@
 <ion-nav id="nav" [root]="rootPage" #nav></ion-nav>
 
+<div *ngIf="showSplash" class="splash">
+	<div id="cooking">
+	  <div class="bubble"></div>
+	  <div class="bubble"></div>
+	  <div class="bubble"></div>
+	  <div class="bubble"></div>
+	  <div class="bubble"></div>
+	  <div id="area">
+	    <div id="sides">
+	      <div id="pan"></div>
+	      <div id="handle"></div>
+	    </div>
+	    <div id="pancake">
+	      <div id="pastry"></div>
+	    </div>
+	  </div>
+	</div>
+</div>
+
 <ion-menu [content]="nav" id="menu">
 
   <ion-header>

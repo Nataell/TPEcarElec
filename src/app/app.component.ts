@@ -19,6 +19,9 @@ import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { AccountCreationPage } from '../pages/account-creation/account-creation';
 
+import { timer } from 'rxjs/observable/timer';
+
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -33,6 +36,7 @@ export class MyApp {
   connected: boolean;
   developmentState: true;
   credentials = {email: '', pass: ''};
+  showSplash = true;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public alertCtrl: AlertController, private auth: AuthServiceProvider) {
     platform.ready().then(() => {
@@ -42,6 +46,7 @@ export class MyApp {
 			statusBar.show();
       splashScreen.hide();
 
+      timer(3000).subscribe(() => this.showSplash = false)
 
       var test = this.auth.getUser();
       if(test!=null){

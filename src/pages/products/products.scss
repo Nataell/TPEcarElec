@@ -27,6 +27,7 @@ page-products {
 	}
 
 	.cut-text-title {
+		font-size: 10px;
 		width : 68px;
 	  overflow:hidden;
 	  display:inline-block;
@@ -35,10 +36,15 @@ page-products {
 	}
 
 	.cut-text-seller {
+		font-size: 10px;
 		width : 42px;
 	  overflow:hidden;
 	  display:inline-block;
 	  text-overflow: ellipsis;
 	  white-space: nowrap;
+	}
+
+	.price {
+		font-size: 10px;
 	}
 }
