@@ -10,7 +10,7 @@ import { Recipe_WelcomePage } from '../pages/recipe_welcome/recipe_welcome';
 import { ProductsPage } from '../pages/products/products';
 import { ProductsListPage } from '../pages/products-list/products-list';
 import { ProductsViewPage } from '../pages/products-view/products-view';
-import { SettingsPage } from '../pages/settings/settings';
+// import { SettingsPage } from '../pages/settings/settings';
 import { MealPage } from '../pages/meal/meal';
 import { MealListPage } from '../pages/meal-list/meal-list';
 import { MealViewPage } from '../pages/meal-view/meal-view';
@@ -22,6 +22,7 @@ import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { AccountCreationPage } from '../pages/account-creation/account-creation';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,15 @@ import { AccountCreationPage } from '../pages/account-creation/account-creation'
     HomePage,
     LoginPage,
 		MealPage,
+<<<<<<< HEAD
     MyApp,
+=======
+		MealListPage,
+		MealViewPage,
+    MyApp,
+		BasketPage,
+		SingleRecipePage,
+>>>>>>> d7a1de0... UI improvments
 		NewRecipeBasisPage,
     NewRecipeIngredientsPage,
     NewRecipeStepsPage,
@@ -39,7 +48,7 @@ import { AccountCreationPage } from '../pages/account-creation/account-creation'
 		ProductsPage,
 		ProductsViewPage,
 		Recipe_WelcomePage,
-    SettingsPage,
+    // SettingsPage,
 		SingleRecipePage
   ],
   imports: [
@@ -61,11 +70,28 @@ import { AccountCreationPage } from '../pages/account-creation/account-creation'
 		ProductsPage,
 		ProductsListPage,
 		ProductsViewPage,
+<<<<<<< HEAD
+<<<<<<< HEAD
 		Recipe_WelcomePage,
     SettingsPage,
 		SingleRecipePage
+=======
+		// SettingsPage,
+=======
+>>>>>>> fe3814c... Add login service
+    Recipe_WelcomePage,
+		MealPage,
+		MealListPage,
+		MealViewPage,
+		BasketPage,
+		SingleRecipePage,
+		NewRecipeBasisPage,
+    NewRecipeIngredientsPage,
+    NewRecipeStepsPage
+>>>>>>> d7a1de0... UI improvments
   ],
   providers: [
+    AuthServiceProvider,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
