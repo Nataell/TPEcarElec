@@ -10,7 +10,7 @@ import { Recipe_WelcomePage } from '../pages/recipe_welcome/recipe_welcome';
 import { ProductsPage } from '../pages/products/products';
 import { ProductsListPage } from '../pages/products-list/products-list';
 import { ProductsViewPage } from '../pages/products-view/products-view';
-import { SettingsPage } from '../pages/settings/settings';
+// import { SettingsPage } from '../pages/settings/settings';
 import { MealPage } from '../pages/meal/meal';
 import { MealListPage } from '../pages/meal-list/meal-list';
 import { MealViewPage } from '../pages/meal-view/meal-view';
@@ -33,6 +33,7 @@ import { AccountCreationPage } from '../pages/account-creation/account-creation'
 		MealPage,
 		MealListPage,
 		MealViewPage,
+    MyApp,
 		BasketPage,
 		SingleRecipePage,
 		NewRecipeBasisPage,
@@ -42,7 +43,7 @@ import { AccountCreationPage } from '../pages/account-creation/account-creation'
 		ProductsPage,
 		ProductsViewPage,
 		Recipe_WelcomePage,
-    SettingsPage,
+    // SettingsPage,
 		SingleRecipePage
   ],
   imports: [
@@ -64,7 +65,8 @@ import { AccountCreationPage } from '../pages/account-creation/account-creation'
 		ProductsPage,
 		ProductsListPage,
 		ProductsViewPage,
-		SettingsPage,
+		// SettingsPage,
+    Recipe_WelcomePage,
 		MealPage,
 		MealListPage,
 		MealViewPage,

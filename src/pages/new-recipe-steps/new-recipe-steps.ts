@@ -9,7 +9,6 @@ import { NavController, Navbar } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-new-recipe-steps',
   templateUrl: 'new-recipe-steps.html',
@@ -56,6 +55,6 @@ export class NewRecipeStepsPage {
 
   modifyStep(step){
     this.m_step = step;
-    removeStep(step);
+    this.removeStep(step);
   }
 }

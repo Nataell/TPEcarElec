@@ -14,10 +14,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  id: "";
+  mail: "";
   pass: "";
+  accounts: Array<{ mail: string, pass: string }>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.accounts = [
+      { mail: "mika@rotte.fr", pass: "mika" },
+      { mail: "trist@itude.fr", pass: "trist" },
+      { mail: "anto@nique.fr", pass: "anto"}
+    ];
   }
 
   ionViewDidLoad() {
@@ -25,10 +31,24 @@ export class LoginPage {
   }
 
   openForgetPasswordPage(){
-    console.log("click on forget password button")
+    console.log("click on forget password button");
   }
 
   logIn(){
-    console.log("The user wants to login with "+this.id+" as id and "+this.pass+" as password");
+    var logedIn = false;
+    for (let i = 0; i < this.accounts.length; i++) {
+      if(this.mail==this.accounts[i].mail && this.pass==this.accounts[i].pass){
+        console.log("Connected");
+        logedIn = true;
+      }
+    }
+    if(!logedIn){
+      console.log("Unknow informations. Please verify and retry");
+    }
+    else{
+      window.localStorage.setItem("Mail", this.mail);
+      window.localStorage.setItem("Password", this.pass);
+    }
+    console.log("The user wants to login with "+this.mail+" as id and "+this.pass+" as password");
   }
 }

@@ -16,7 +16,7 @@ import { NewRecipeStepsPage } from '../new-recipe-steps/new-recipe-steps';
 export class NewRecipeIngredientsPage {
   m_ingredientList: Array<{name: string, quantity: string}>;
   @ViewChild(Navbar) navBar: Navbar;
-  m_ingredient = {};
+  m_ingredient = {name: "", quantity: ""};
 
   constructor(public navCtrl: NavController) {
     this.m_ingredientList = [
