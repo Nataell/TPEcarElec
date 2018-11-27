@@ -3,6 +3,8 @@ import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AlertController } from 'ionic-angular';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { User } from '../providers/auth-service/auth-service';
 
 
 //import { Badge } from '@ionic-native/badge';
@@ -30,20 +32,31 @@ export class MyApp {
   loggedOutPages: Array<{ title: string, component: any, icon: string }>;
   connected: boolean;
   developmentState: true;
+  credentials = {email: '', pass: ''};
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public alertCtrl: AlertController) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public alertCtrl: AlertController, private auth: AuthServiceProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.backgroundColorByHexString('#007713');
 			statusBar.show();
       splashScreen.hide();
-      if(window.localStorage.getItem("Mail")){
+      var test = this.auth.getUser();
+      if(test!=null){
+        this.credentials.email = test.email;
+        this.credentials.pass = test.pass;
+      }
+      if(this.credentials.email != '' && this.credentials.pass != ''){
         this.connected = true;
       }
       else{
         this.connected = false;
       }
+      this.auth.login(this.credentials).subscribe(allowed => {
+        if(allowed){
+          this.refreshMenu();
+        }
+      });
       this.refreshMenu();
     });
   }
@@ -56,10 +69,15 @@ export class MyApp {
 
 
   logOut() {
-    window.localStorage.removeItem("Mail");
-    window.localStorage.removeItem("Password");
-    this.connected = false;
-    this.refreshMenu();
+    this.auth.logout().subscribe(allowed => {
+      if(allowed){
+        this.connected = false;
+        this.refreshMenu();
+      }
+      else{
+        //show disconnection error
+      }
+    });
   }
 
   refreshMenu() {

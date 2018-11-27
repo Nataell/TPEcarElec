@@ -22,6 +22,7 @@ import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { AccountCreationPage } from '../pages/account-creation/account-creation';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,6 @@ import { AccountCreationPage } from '../pages/account-creation/account-creation'
 		ProductsPage,
 		ProductsListPage,
 		ProductsViewPage,
-		// SettingsPage,
     Recipe_WelcomePage,
 		MealPage,
 		MealListPage,
@@ -77,6 +77,7 @@ import { AccountCreationPage } from '../pages/account-creation/account-creation'
     NewRecipeStepsPage
   ],
   providers: [
+    AuthServiceProvider,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
