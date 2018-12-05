@@ -32,15 +32,9 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     HomePage,
     LoginPage,
 		MealPage,
-<<<<<<< HEAD
     MyApp,
-=======
 		MealListPage,
 		MealViewPage,
-    MyApp,
-		BasketPage,
-		SingleRecipePage,
->>>>>>> d7a1de0... UI improvments
 		NewRecipeBasisPage,
     NewRecipeIngredientsPage,
     NewRecipeStepsPage,
@@ -48,7 +42,6 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 		ProductsPage,
 		ProductsViewPage,
 		Recipe_WelcomePage,
-    // SettingsPage,
 		SingleRecipePage
   ],
   imports: [
@@ -70,25 +63,10 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 		ProductsPage,
 		ProductsListPage,
 		ProductsViewPage,
-<<<<<<< HEAD
-<<<<<<< HEAD
 		Recipe_WelcomePage,
-    SettingsPage,
-		SingleRecipePage
-=======
-		// SettingsPage,
-=======
->>>>>>> fe3814c... Add login service
-    Recipe_WelcomePage,
-		MealPage,
 		MealListPage,
 		MealViewPage,
-		BasketPage,
 		SingleRecipePage,
-		NewRecipeBasisPage,
-    NewRecipeIngredientsPage,
-    NewRecipeStepsPage
->>>>>>> d7a1de0... UI improvments
   ],
   providers: [
     AuthServiceProvider,
