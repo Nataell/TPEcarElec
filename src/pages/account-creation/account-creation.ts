@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from "@angular/core";
+import { IonicPage, NavController, NavParams } from "ionic-angular";
 
 /**
  * Generated class for the AccountCreationPage page.
@@ -10,17 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-account-creation',
-  templateUrl: 'account-creation.html',
+  selector: "page-account-creation",
+  templateUrl: "account-creation.html",
 })
 export class AccountCreationPage {
-  
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AccountCreationPage');
+  private ionViewDidLoad() {
+    console.log("ionViewDidLoad AccountCreationPage");
   }
 
 }

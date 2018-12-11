@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
+import { Component } from "@angular/core";
+import { IonicPage, NavController, NavParams } from "ionic-angular";
 
 /**
  * Generated class for the LoginPage page.
@@ -10,15 +10,17 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
  */
 
 @IonicPage()
+
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: "page-login",
+  templateUrl: "login.html",
 })
+
 export class LoginPage {
-  mail: "";
-  pass: "";
-  accounts: Array<{ mail: string, pass: string }>;
-  credentials = {email: '', pass: ''};
+  private mail: undefined;
+  private pass: undefined;
+  private accounts: Array<{ mail: string, pass: string }>;
+  private credentials = {email: undefined, pass: undefined};
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthServiceProvider) {
     // this.accounts = [
@@ -26,23 +28,22 @@ export class LoginPage {
     //   { mail: "trist@itude.fr", pass: "trist" },
     //   { mail: "anto@nique.fr", pass: "anto"}
     // ];
-
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  public ionViewDidLoad() {
+    // console.log("ionViewDidLoad LoginPage");
   }
 
-  openForgetPasswordPage(){
-    console.log("click on forget password button");
+  public openForgetPasswordPage() {
+    // console.log("click on forget password button");
   }
 
-  logIn(){
+  public logIn() {
     this.credentials.email = this.mail;
     this.credentials.pass = this.pass;
-    this.auth.login(this.credentials).subscribe(allowed => {
-      if(allowed){
-        console.log("connection");
+    this.auth.login(this.credentials).subscribe((allowed) => {
+      if (allowed) {
+        // console.log("connection");
       }
     });
   }

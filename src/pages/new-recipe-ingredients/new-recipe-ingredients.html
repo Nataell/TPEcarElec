@@ -16,18 +16,18 @@
   <ion-item-group>
     <ion-item>
       <ion-label stacked>Nom de l'ingrédient</ion-label>
-      <ion-input [(ngModel)]="m_ingredient.name" type="text"></ion-input>
+      <ion-input [(ngModel)]="ingredient.name" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Quantité (avec l'unité)</ion-label>
-      <ion-input [(ngModel)]="m_ingredient.quantity" ></ion-input>
+      <ion-input [(ngModel)]="ingredient.quantity" ></ion-input>
     </ion-item>
     <ion-item>
       <button ion-button block icon-only (click)="addNewIngredient()"><ion-icon name="add"></ion-icon></button>
     </ion-item>
   </ion-item-group>
   <ion-list text-wrap>
-    <ion-item-sliding *ngFor="let ingredient of m_ingredientList">
+    <ion-item-sliding *ngFor="let ingredient of ingredientList">
       <ion-item>
         <ion-grid no-padding no-margin>
           <ion-row>

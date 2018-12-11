@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { NewRecipeIngredientsPage } from '../new-recipe-ingredients/new-recipe-ingredients';
-
+import { Component } from "@angular/core";
+import { NavController } from "ionic-angular";
+import { NewRecipeIngredientsPage } from "../new-recipe-ingredients/new-recipe-ingredients";
 
 /**
  * Generated class for the NewRecipePage page.
@@ -10,24 +9,33 @@ import { NewRecipeIngredientsPage } from '../new-recipe-ingredients/new-recipe-i
  */
 
 @Component({
-  selector: 'page-new-recipe-basis',
-  templateUrl: 'new-recipe-basis.html'
+  selector: "page-new-recipe-basis",
+  templateUrl: "new-recipe-basis.html",
 })
+
 export class NewRecipeBasisPage {
-	useImage: boolean;
-  useLink: boolean;
+  private useImage: boolean;
+  private useLink: boolean;
 
   constructor(public navCtrl: NavController) {
-		this.useImage=false;
-    this.useLink=false;
+    this.useImage = false;
+    this.useLink = false;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewRecipePage');
+  public ionViewDidLoad() {
+    console.log("ionViewDidLoad NewRecipePage");
   }
 
-	goToIngredients() {
-		console.log("change content to list ingredients");
-    this.navCtrl.push(NewRecipeIngredientsPage,{},{animate:true,animation:'transition',duration:500,direction:'forward'});
-	}
+  public goToIngredients() {
+    console.log("change content to list ingredients");
+    this.navCtrl.push( NewRecipeIngredientsPage,
+      {},
+      {
+        animate: true,
+        animation: "transition",
+        direction: "forward",
+        duration: 500,
+      },
+    );
+  }
 }

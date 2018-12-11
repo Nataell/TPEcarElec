@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from '../login/login';
-import { AccountCreationPage } from '../account-creation/account-creation';
-import { AlertController } from 'ionic-angular';
+import { AccountCreationPage } from "../account-creation/account-creation";
+import { AlertController } from "ionic-angular";
+import { Component } from "@angular/core";
+import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { LoginPage } from "../login/login";
 
 /**
  * Generated class for the AccountPage page.
@@ -13,44 +13,45 @@ import { AlertController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-account',
-  templateUrl: 'account.html',
+  selector: "page-account",
+  templateUrl: "account.html",
 })
+
 export class AccountPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AccountPage');
+  public ionViewDidLoad() {
+    // console.log("ionViewDidLoad AccountPage");
   }
 
-  openLogInPage(){
+  public openLogInPage() {
     this.navCtrl.push(LoginPage);
   }
 
-  openCreateAccountPage(){
+  public openCreateAccountPage() {
     this.navCtrl.push(AccountCreationPage);
   }
 
-  showLogout() {
-    let confirm = this.alertCtrl.create({
-      title: 'Se déconnecter?',
-      message: 'Voulez vous vraiment vous déconnecter?',
+  public showLogout() {
+    const confirm = this.alertCtrl.create({
       buttons: [
         {
-          text: 'Non',
           handler: () => {
-            console.log('Disagree clicked');
-          }
+            // console.log("Disagree clicked");
+          },
+          text: "Non",
         },
         {
-          text: 'Oui',
           handler: () => {
-            console.log('Agree clicked');
-          }
-        }
-      ]
+            // console.log("Agree clicked");
+          },
+          text: "Oui",
+        },
+      ],
+      message: "Voulez vous vraiment vous déconnecter?",
+      title: "Se déconnecter?",
     });
     confirm.present();
   }

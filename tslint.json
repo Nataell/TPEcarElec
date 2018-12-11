@@ -1,11 +1,14 @@
 {
-  "rules": {
-    "no-duplicate-variable": true,
-    "no-unused-variable": [
-      true
-    ]
-  },
-  "rulesDirectory": [
-    "node_modules/tslint-eslint-rules/dist/rules"
-  ]
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+      "ordered-imports": [true, {
+        "import-sources-order": "any",
+        "named-imports-order": "case-insensitive"
+      }]
+    },
+    "rulesDirectory": []
 }

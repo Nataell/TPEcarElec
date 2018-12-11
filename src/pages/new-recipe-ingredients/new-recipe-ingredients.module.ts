@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { NewRecipeIngredientsPage } from './new-recipe-ingredients';
+import { NgModule } from "@angular/core";
+import { IonicPageModule } from "ionic-angular";
+import { NewRecipeIngredientsPage } from "./new-recipe-ingredients";
 
 @NgModule({
   declarations: [

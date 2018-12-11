@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { AccountCreationPage } from './account-creation';
+import { AccountCreationPage } from "./account-creation";
+import { IonicPageModule } from "ionic-angular";
+import { NgModule } from "@angular/core";
 
 @NgModule({
   declarations: [

@@ -1,78 +1,76 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { Recipe_WelcomePage } from '../pages/recipe_welcome/recipe_welcome';
-import { ProductsPage } from '../pages/products/products';
-import { ProductsListPage } from '../pages/products-list/products-list';
-import { ProductsViewPage } from '../pages/products-view/products-view';
-// import { SettingsPage } from '../pages/settings/settings';
-import { MealPage } from '../pages/meal/meal';
-import { MealListPage } from '../pages/meal-list/meal-list';
-import { MealViewPage } from '../pages/meal-view/meal-view';
-import { BasketPage } from '../pages/basket/basket';
-import { SingleRecipePage } from '../pages/single-recipe/single-recipe';
-import { NewRecipeBasisPage } from '../pages/new-recipe-basis/new-recipe-basis';
-import { NewRecipeIngredientsPage } from '../pages/new-recipe-ingredients/new-recipe-ingredients';
-import { NewRecipeStepsPage } from '../pages/new-recipe-steps/new-recipe-steps';
-import { AccountPage } from '../pages/account/account';
-import { LoginPage } from '../pages/login/login';
-import { AccountCreationPage } from '../pages/account-creation/account-creation';
-import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { AccountCreationPage } from "../pages/account-creation/account-creation";
+import { AccountPage } from "../pages/account/account";
+import { AuthServiceProvider } from "../providers/auth-service/auth-service";
+import { BasketPage } from "../pages/basket/basket";
+import { BrowserModule } from "@angular/platform-browser";
+import { ErrorHandler, NgModule } from "@angular/core";
+import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
+import { HomePage } from "../pages/home/home";
+import { LoginPage } from "../pages/login/login";
+import { MealListPage } from "../pages/meal-list/meal-list";
+import { MealPage } from "../pages/meal/meal";
+import { MealViewPage } from "../pages/meal-view/meal-view";
+import { MyApp } from "./app.component";
+import { NewRecipeBasisPage } from "../pages/new-recipe-basis/new-recipe-basis";
+import { NewRecipeIngredientsPage } from "../pages/new-recipe-ingredients/new-recipe-ingredients";
+import { NewRecipeStepsPage } from "../pages/new-recipe-steps/new-recipe-steps";
+import { ProductsPage } from "../pages/products/products";
+import { ProductsListPage } from "../pages/products-list/products-list";
+import { ProductsViewPage } from "../pages/products-view/products-view";
+import { Recipe_WelcomePage } from "../pages/recipe_welcome/recipe_welcome";
+import { SingleRecipePage } from "../pages/single-recipe/single-recipe";
+import { SplashScreen } from "@ionic-native/splash-screen";
+import { StatusBar } from "@ionic-native/status-bar";
 
 @NgModule({
+  bootstrap: [IonicApp],
   declarations: [
     AccountPage,
     AccountCreationPage,
-		BasketPage,
+    BasketPage,
     HomePage,
     LoginPage,
-		MealPage,
+    MealPage,
     MyApp,
-		MealListPage,
-		MealViewPage,
-		NewRecipeBasisPage,
+    MealListPage,
+    MealViewPage,
+    NewRecipeBasisPage,
     NewRecipeIngredientsPage,
     NewRecipeStepsPage,
-		ProductsListPage,
-		ProductsPage,
-		ProductsViewPage,
-		Recipe_WelcomePage,
-		SingleRecipePage
+    ProductsListPage,
+    ProductsPage,
+    ProductsViewPage,
+    Recipe_WelcomePage,
+    SingleRecipePage,
   ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp)
-  ],
-  bootstrap: [IonicApp],
   entryComponents: [
     AccountCreationPage,
     AccountPage,
-		BasketPage,
+    BasketPage,
     HomePage,
     LoginPage,
-		MealPage,
+    MealPage,
     MyApp,
-		NewRecipeBasisPage,
+    NewRecipeBasisPage,
     NewRecipeIngredientsPage,
     NewRecipeStepsPage,
-		ProductsPage,
-		ProductsListPage,
-		ProductsViewPage,
-		Recipe_WelcomePage,
-		MealListPage,
-		MealViewPage,
-		SingleRecipePage,
+    ProductsPage,
+    ProductsListPage,
+    ProductsViewPage,
+    Recipe_WelcomePage,
+    MealListPage,
+    MealViewPage,
+    SingleRecipePage,
+  ],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp),
   ],
   providers: [
     AuthServiceProvider,
-    StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    StatusBar,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+  ],
 })
 export class AppModule {}
