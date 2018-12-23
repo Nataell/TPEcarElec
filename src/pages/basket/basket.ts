@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
 })
 export class BasketPage {
 
-  private purchases: Array<{ imgSrc: string, imgTitle: string, seller: string, price: number, quantity : number }>;
+  public purchases: Array<{ imgSrc: string, imgTitle: string, seller: string, price: number, quantity : number }>;
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
     this.purchases = [

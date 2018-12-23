@@ -6,9 +6,12 @@
     "jsRules": {},
     "rules": {
       "ordered-imports": [true, {
-        "import-sources-order": "any",
-        "named-imports-order": "case-insensitive"
-      }]
+        "import-sources-order" : "any",
+        "named-imports-order": "case-insensitive",
+        "module-source-path" : "basename"
+      }],
+      "max-line-length": [true, 200],
+      "object-literal-sort-keys": false
     },
     "rulesDirectory": []
 }

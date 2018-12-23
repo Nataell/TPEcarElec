@@ -17,14 +17,14 @@
   <ion-card-header>Étapes</ion-card-header>
   <ion-item-group>
     <ion-item>
-      <ion-textarea [(ngModel)]="step" placeholder="Décrivez votre étape"></ion-textarea>
+      <ion-textarea [(ngModel)]="m_step" placeholder="Décrivez votre étape"></ion-textarea>
     </ion-item>
     <ion-item>
       <button ion-button block icon-only (click)="addNewStep()"><ion-icon name="add"></ion-icon></button>
     </ion-item>
   </ion-item-group>
   <ion-list margin-vertical text-wrap reorder="true">
-      <ion-item *ngFor="let step of stepList">
+      <ion-item *ngFor="let step of m_stepList">
         <p>{{step}}</p>
       </ion-item>
   </ion-list>
