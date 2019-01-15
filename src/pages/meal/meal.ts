@@ -41,7 +41,7 @@ export class MealPage {
     console.log("Tout les repas.");
   }
 
-  public goSingleMeal(mealName) {
+  public goMeal(mealName) {
     console.log(mealName);
     this.navCtrl.push((MealViewPage), {
       title: mealName,

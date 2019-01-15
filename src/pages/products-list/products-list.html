@@ -18,7 +18,7 @@
 	    <ion-refresher-content></ion-refresher-content>
 	 </ion-refresher>
 	<ion-list>
-  	<ion-item *ngFor="let product of products" (click)="goSingleProduct(product.imgTitle)">
+  	<ion-item *ngFor="let product of products" (click)="goProduct(product.imgTitle)">
     	<ion-thumbnail item-start>
       	<img src={{product.imgSrc}}>
 	    </ion-thumbnail>

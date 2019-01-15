@@ -30,7 +30,7 @@
 			</ion-grid>
 			<ion-card-content style="padding-top: 0">
 				<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
-					<ion-card *ngFor="let meal of meals" class="singleMeal" no-margin (click)="goSingleMeal(meal.imgTitle)" style="background-color: white">
+					<ion-card *ngFor="let meal of meals" class="singleMeal" no-margin (click)="goMeal(meal.imgTitle)" style="background-color: white">
 						<img src={{meal.imgSrc}}>
 						<ion-card-content no-padding margin-top>
 							<ion-grid no-padding>
@@ -74,7 +74,7 @@
 		</ion-grid>
 		<ion-card-content style="padding-top: 0">
 			<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
-				<ion-card *ngFor="let meal of meals" class="singleMeal" no-margin (click)="goSingleMeal(meal.imgTitle)" style="background-color: white">
+				<ion-card *ngFor="let meal of meals" class="singleMeal" no-margin (click)="goMeal(meal.imgTitle)" style="background-color: white">
 					<img src={{meal.imgSrc}}>
 					<ion-card-content no-padding margin-top>
 						<ion-grid no-padding>
@@ -118,7 +118,7 @@
 		</ion-grid>
 		<ion-card-content style="padding-top: 0">
 			<ion-scroll scrollX="true" style="white-space: nowrap; height: 200px;" no-padding>
-				<ion-card *ngFor="let meal of meals" class="singleMeal" no-margin (click)="goSingleMeal(meal.imgTitle)" style="background-color: white">
+				<ion-card *ngFor="let meal of meals" class="singleMeal" no-margin (click)="goMeal(meal.imgTitle)" style="background-color: white">
 					<img src={{meal.imgSrc}}>
 					<ion-card-content no-padding margin-top>
 						<ion-grid no-padding>

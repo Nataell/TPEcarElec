@@ -20,10 +20,10 @@
 				<p item-end>X {{purchase.quantity}}</p>
 	    </ion-item>
 	    <ion-item-options side="right">
-	      <button ion-button color="primary" (click)="confirmAdd()">
-	        <ion-icon name="add"></ion-icon>
+	      <button ion-button color="primary" (click)="askModify()">
+	        <ion-icon name="create"></ion-icon>
 	      </button>
-				<button ion-button color="danger" (click)="confirmDelete()">
+				<button ion-button color="danger" (click)="askDelete()">
 	        <ion-icon name="trash"></ion-icon>
 	      </button>
 	    </ion-item-options>
@@ -40,7 +40,7 @@
 				<p><b>Total</b> :</p>
 			</ion-col>
 			<ion-col>
-				<p text-right>{{computeQuantity()}}€</p>
+				<p text-right>{{computePrice()}}€</p>
 			</ion-col>
 		</ion-row>
 	</ion-grid>

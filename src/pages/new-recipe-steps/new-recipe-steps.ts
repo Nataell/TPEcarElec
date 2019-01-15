@@ -1,26 +1,18 @@
 import { Component, ViewChild } from "@angular/core";
 import { Navbar, NavController } from "ionic-angular";
 
-
-/**
- * Generated class for the NewRecipeStepsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @Component({
   selector: "page-new-recipe-steps",
   templateUrl: "new-recipe-steps.html",
 })
 export class NewRecipeStepsPage {
   @ViewChild(Navbar) navBar: Navbar;
-  private m_stepList: Array<string>;
-  private m_step;
+  private stepList: Array<string>;
+  private currentStep;
 
   constructor(public navCtrl: NavController) {
-    this.m_step = "";
-    this.m_stepList = [
+    this.currentStep = "";
+    this.stepList = [
       "beurrez votre tranche de pain",
       "étalez la tranche de jambon sur votre tranche de pain",
       "placez vos trois tranches de fromage de chevre sur votre tranche de jambon",
@@ -31,22 +23,27 @@ export class NewRecipeStepsPage {
     ];
   }
 
-  ionViewDidLoad() {
-    this.navBar.backButtonClick = () =>{
-     this.navCtrl.pop({animate:true,animation:'transition',duration:500,direction:'back'});
+  public ionViewDidLoad() {
+    this.navBar.backButtonClick = () => {
+     this.navCtrl.pop({
+       animate:true,
+       animation:'transition',
+       duration:500,
+       direction:'back',
+     });
     }
   }
 
-  goToRecipeValidation() {
+  public goToRecipeValidation() {
     console.log("validate recipe")
   }
 
-  addNewStep(){
+  public addStep(){
     console.log("Adding new step");
-    if(this.m_step!=""){
-      var new_step = this.m_step;
-      this.m_stepList.push(new_step);
-      this.m_step = "";
+    if(this.currentStep!=""){
+      const newStep = this.currentStep;
+      this.stepList.push(newStep);
+      this.currentStep = "";
     }
     else{
       console.log("invalid data");
@@ -54,13 +51,17 @@ export class NewRecipeStepsPage {
     }
   }
 
-  removeStep(step){
-    var stepIndex = this.m_stepList.indexOf(step);
-    this.m_stepList.splice(stepIndex,1);
+  public removeStep(step){
+    var stepIndex = this.stepList.indexOf(step);
+    this.stepList.splice(stepIndex,1);
   }
 
-  modifyStep(step){
-    this.m_step = step;
+  /**
+  To modify a step, we use the existing UI. We put informations we want to
+  modify on the existing field and we delete it from the list.
+  */
+  public modifyStep(step){
+    this.currentStep = step;
     this.removeStep(step);
   }
 }

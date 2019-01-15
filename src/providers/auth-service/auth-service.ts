@@ -2,13 +2,6 @@ import { AlertController } from "ionic-angular";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs/Observable";
 
-/*
-  Generated class for the AuthServiceProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-
 export class User {
   public email: string;
   public name: string;
@@ -81,5 +74,4 @@ export class AuthServiceProvider {
       observer.complete();
     });
   }
-
 }

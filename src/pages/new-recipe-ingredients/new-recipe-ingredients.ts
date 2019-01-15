@@ -2,23 +2,18 @@ import { Component, ViewChild } from "@angular/core";
 import { Navbar, NavController } from "ionic-angular";
 import { NewRecipeStepsPage } from "../new-recipe-steps/new-recipe-steps";
 
-/**
- * Generated class for the NewRecipeIngredientsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @Component({
   selector: "page-new-recipe-ingredients",
   templateUrl: "new-recipe-ingredients.html",
 })
 export class NewRecipeIngredientsPage {
+  // NavBar is use to implement the back button
   @ViewChild(Navbar) navBar: Navbar;
   private ingredientList: Array<{name: string, quantity: string}>;
   private ingredient = {name: null, quantity: null};
 
   constructor(public navCtrl: NavController) {
+    // static ingredient list just to use UI
     this.ingredientList = [
       {name: "Pain de mie", quantity: "2 tranches"},
       {name: "Œufs", quantity: "1"},
@@ -29,30 +24,33 @@ export class NewRecipeIngredientsPage {
   }
 
   public ionViewDidLoad() {
+    // when load this page, implement the back button functionnality
     this.navBar.backButtonClick = () => {
       this.navCtrl.pop( {
         animate: true,
         animation: "transition",
+        // slide the page from the left to right when we want to go back
         direction: "back",
         duration: 500,
       });
     };
   }
 
-  private goToSteps() {
+  private goSteps() {
     this.navCtrl.push(
       NewRecipeStepsPage,
       {},
       {
         animate: true,
         animation: "transition",
+        // slide the page from the right to left
         direction: "forward",
         duration: 500,
       },
     );
   }
 
-  private addNewIngredient() {
+  private addIngredients() {
     console.log("Adding new ingredient");
     if (this.ingredient.name && this.ingredient.quantity) {
       const newIngredient = {name: this.ingredient.name, quantity: this.ingredient.quantity};
@@ -60,8 +58,7 @@ export class NewRecipeIngredientsPage {
       this.ingredient.name = "";
       this.ingredient.quantity = "";
     } else {
-      console.log("invalid data");
-      // display alert
+      console.log("All data are not filled");
     }
   }
 
@@ -71,6 +68,10 @@ export class NewRecipeIngredientsPage {
     this.ingredientList.splice(ingredientIndex, 1);
   }
 
+  /**
+  When we want to modify an ingredient, we simply use the UI already made:
+  We put the informations in the two fields for ingredients and we delete it from list
+  */
   private modifyIngredient(ingredient) {
     this.ingredient.name = ingredient.name;
     this.ingredient.quantity = ingredient.quantity;

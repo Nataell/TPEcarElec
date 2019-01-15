@@ -29,7 +29,7 @@ export class ProductsListPage {
     this.navCtrl.push(BasketPage);
   }
 
-  public goSingleProduct(productName) {
+  public goProduct(productName) {
     console.log(productName);
     this.navCtrl.push(ProductsViewPage, {
       title: productName,

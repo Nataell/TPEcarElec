@@ -23,7 +23,7 @@
       <ion-input [(ngModel)]="ingredient.quantity" ></ion-input>
     </ion-item>
     <ion-item>
-      <button ion-button block icon-only (click)="addNewIngredient()"><ion-icon name="add"></ion-icon></button>
+      <button ion-button block icon-only (click)="addIngredients()"><ion-icon name="add"></ion-icon></button>
     </ion-item>
   </ion-item-group>
   <ion-list text-wrap>
@@ -53,7 +53,7 @@
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
-  <button ion-button block icon-end (click)="goToSteps()">
+  <button ion-button block icon-end (click)="goSteps()">
     Étapes
     <ion-icon name="arrow-forward"></ion-icon>
   </button>

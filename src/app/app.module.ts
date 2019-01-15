@@ -14,7 +14,7 @@ import { MyApp } from "./app.component";
 import { NewRecipeBasisPage } from "../pages/new-recipe-basis/new-recipe-basis";
 import { NewRecipeIngredientsPage } from "../pages/new-recipe-ingredients/new-recipe-ingredients";
 import { NewRecipeStepsPage } from "../pages/new-recipe-steps/new-recipe-steps";
-import { ProductsPage } from "../pages/products/products";
+import { ProductHomePage } from "../pages/product-home/product-home";
 import { ProductsListPage } from "../pages/products-list/products-list";
 import { ProductsViewPage } from "../pages/products-view/products-view";
 import { Recipe_WelcomePage } from "../pages/recipe_welcome/recipe_welcome";
@@ -38,7 +38,7 @@ import { StatusBar } from "@ionic-native/status-bar";
     NewRecipeIngredientsPage,
     NewRecipeStepsPage,
     ProductsListPage,
-    ProductsPage,
+    ProductHomePage,
     ProductsViewPage,
     Recipe_WelcomePage,
     SingleRecipePage,
@@ -54,7 +54,7 @@ import { StatusBar } from "@ionic-native/status-bar";
     NewRecipeBasisPage,
     NewRecipeIngredientsPage,
     NewRecipeStepsPage,
-    ProductsPage,
+    ProductHomePage,
     ProductsListPage,
     ProductsViewPage,
     Recipe_WelcomePage,

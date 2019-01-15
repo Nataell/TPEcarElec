@@ -6,7 +6,7 @@ import { AuthServiceProvider } from "../providers/auth-service/auth-service";
 import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
 import { MealPage } from "../pages/meal/meal";
-import { ProductsPage } from "../pages/products/products";
+import { ProductHomePage } from "../pages/product-home/product-home";
 import { Recipe_WelcomePage } from "../pages/recipe_welcome/recipe_welcome";
 import { SingleRecipePage } from "../pages/single-recipe/single-recipe";
 import { SplashScreen } from "@ionic-native/splash-screen";
@@ -63,7 +63,7 @@ export class MyApp {
     this.pages = [
       { title: "Accueil", component: HomePage, icon: "home" },
       { title: "Recettes", component: Recipe_WelcomePage, icon: "bookmarks" },
-      { title: "Produits", component: ProductsPage, icon: "nutrition" },
+      { title: "Produits", component: ProductHomePage, icon: "nutrition" },
       { title: "Repas", component: MealPage, icon: "restaurant" },
     ];
     if (this.connected) {
@@ -83,7 +83,7 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
-  public showLogout() {
+  public askLogOut() {
     const confirm = this.alertCtrl.create({
       buttons: [
         {

@@ -1,7 +1,7 @@
 import { AccountCreationPage } from "../account-creation/account-creation";
 import { AlertController } from "ionic-angular";
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage, NavController } from "ionic-angular";
 import { LoginPage } from "../login/login";
 
 /**
@@ -19,22 +19,22 @@ import { LoginPage } from "../login/login";
 
 export class AccountPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
   }
 
   public ionViewDidLoad() {
     // console.log("ionViewDidLoad AccountPage");
   }
 
-  public openLogInPage() {
+  public goLogIn() {
     this.navCtrl.push(LoginPage);
   }
 
-  public openCreateAccountPage() {
+  public goCreateAccount() {
     this.navCtrl.push(AccountCreationPage);
   }
 
-  public showLogout() {
+  public askLogOut() {
     const confirm = this.alertCtrl.create({
       buttons: [
         {

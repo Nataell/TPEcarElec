@@ -26,7 +26,7 @@ export class NewRecipeBasisPage {
     console.log("ionViewDidLoad NewRecipePage");
   }
 
-  public goToIngredients() {
+  public goIngredients() {
     console.log("change content to list ingredients");
     this.navCtrl.push( NewRecipeIngredientsPage,
       {},

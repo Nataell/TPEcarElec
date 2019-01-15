@@ -16,12 +16,12 @@
 <ion-content padding>
 
 	<ion-card style="background-color:white;">
-		<img src={{productSingle.imgSrc}}>
+		<img src={{productInfos.imgSrc}}>
 			<ion-card-content no-padding>
 				<ion-grid>
 					<ion-row>
 						<ion-col col-6>
-							Disponible chez {{productSingle.seller}}
+							Disponible chez {{productInfos.seller}}
 						</ion-col>
 						<ion-col text-right>
 							PRODUIT DE SAISON
@@ -29,13 +29,13 @@
 					</ion-row>
 					<ion-row>
 						<ion-col col-4>
-							Quantité : {{productSingle.quantity}}
+							Quantité : {{productInfos.quantity}}
 						</ion-col>
 						<ion-col text-center>
 							TOTO
 						</ion-col>
 						<ion-col col-4 text-right>
-							€{{productSingle.price}}/U
+							€{{productInfos.price}}/U
 						</ion-col>
 					</ion-row>
 				</ion-grid>
@@ -45,7 +45,7 @@
 					<ion-col col-6>
 						<ion-item>
 							<ion-label stacked>Quantité voulue :</ion-label>
-							<ion-input type="number" min="1" max="{{productSingle.quantity}}"></ion-input>
+							<ion-input type="number" min="1" max="{{productInfos.quantity}}"></ion-input>
 						</ion-item>
 					</ion-col>
 					<ion-col padding-top>

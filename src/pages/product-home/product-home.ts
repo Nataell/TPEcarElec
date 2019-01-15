@@ -5,16 +5,16 @@ import { ProductsListPage } from "../products-list/products-list";
 import { ProductsViewPage } from "../products-view/products-view";
 
 @Component({
-  selector: "page-products",
-  templateUrl: "products.html",
+  selector: "page-product-home",
+  templateUrl: "product-home.html",
 })
 
-export class ProductsPage {
+export class ProductHomePage {
 
-  public products: Array<{ imgSrc: string, imgTitle: string, seller: string, price: string, seasonProduct: boolean }>;
+  public productList: Array<{ imgSrc: string, imgTitle: string, seller: string, price: string, seasonProduct: boolean }>;
 
   constructor(public navCtrl: NavController) {
-    this.products = [
+    this.productList = [
       { imgSrc: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg", imgTitle: "TOMATES", seller: "Auchan", price: "0.0", seasonProduct: true },
       { imgSrc: "http://selection.readersdigest.ca/wp-content/uploads/2016/03/super-legume-superaliment.jpg", imgTitle: "RADIS", seller: "Auchan", price: "0.0", seasonProduct: true },
       { imgSrc: "https://cf.ltkcdn.net/vegetarian/images/std/121644-425x282-Peaslegume.jpg", imgTitle: "PETITS POIS", seller: "Auchan", price: "0.0", seasonProduct: true },
@@ -42,7 +42,7 @@ export class ProductsPage {
     console.log("Tout les produits.");
   }
 
-  public goSingleProduct(productName) {
+  public goProduct(productName) {
     console.log(productName);
     this.navCtrl.push(ProductsViewPage, {
       title: productName,

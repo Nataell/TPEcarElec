@@ -1,6 +1,6 @@
 import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage, NavController } from "ionic-angular";
 
 /**
  * Generated class for the LoginPage page.
@@ -22,7 +22,7 @@ export class LoginPage {
   private accounts: Array<{ mail: string, pass: string }>;
   private credentials = {email: undefined, pass: undefined};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthServiceProvider) {
+  constructor(public navCtrl: NavController, private auth: AuthServiceProvider) {
     // this.accounts = [
     //   { mail: "mika@rotte.fr", pass: "mika" },
     //   { mail: "trist@itude.fr", pass: "trist" },
@@ -34,7 +34,7 @@ export class LoginPage {
     // console.log("ionViewDidLoad LoginPage");
   }
 
-  public openForgetPasswordPage() {
+  public goForgetPassword() {
     // console.log("click on forget password button");
   }
 

@@ -19,7 +19,7 @@ export class BasketPage {
     ];
   }
 
-  public confirmDelete() {
+  public askDelete() {
     const confirm = this.alertCtrl.create({
       buttons: [
         {
@@ -36,12 +36,12 @@ export class BasketPage {
         },
       ],
       message: "Voulez-vous vraiment supprimer cet élément ?",
-      title: "Supression",
+      title: "Suppression",
     });
     confirm.present();
   }
 
-  public confirmAdd() {
+  public askModify() {
     const prompt = this.alertCtrl.create({
       buttons: [
         {
@@ -63,13 +63,13 @@ export class BasketPage {
           placeholder: "0",
         },
       ],
-      message: "Voulez-vous vraiment ajouter des éléments ?",
-      title: "Ajout",
+      message: "Quelle est votre nouvelle quantité ?",
+      title: "Modifier",
     });
     prompt.present();
   }
 
-  public computeQuantity() {
+  public computePrice() {
     let priceTotal = 0;
     this.purchases.forEach( (purchase) => {
       priceTotal += purchase.price;
