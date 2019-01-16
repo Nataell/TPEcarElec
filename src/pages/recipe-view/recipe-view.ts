@@ -3,11 +3,11 @@ import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
 
 @Component({
-  selector: "page-single-recipe",
-  templateUrl: "single-recipe.html",
+  selector: "page-recipe-view",
+  templateUrl: "recipe-view.html",
 })
 
-export class SingleRecipePage {
+export class RecipeViewPage {
   public recipeInfo: {name: string, imgUrl: string, author: string, people: string, time: string, difficulty: string, priceCat: string};
   public ingredientList: Array<{name: string, quantity: string}>;
   public stepList;

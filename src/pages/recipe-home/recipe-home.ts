@@ -4,11 +4,11 @@ import { NavController } from "ionic-angular";
 import { NewRecipeBasisPage } from "../new-recipe-basis/new-recipe-basis";
 
 @Component({
-  selector: "page-recipe",
-  templateUrl: "recipe_welcome.html",
+  selector: "page-recipe-home",
+  templateUrl: "recipe-home.html",
 })
 
-export class Recipe_WelcomePage {
+export class RecipeHomePage {
   public recipes: Array<{id: string, name: string, imgSrc: string, note: string, difficulty: string, duration: string}>;
 
   constructor(public navCtrl: NavController) {

@@ -5,10 +5,10 @@ import { MealViewPage } from "../meal-view/meal-view";
 import { NavController } from "ionic-angular";
 
 @Component({
-  selector: "page-meal",
-  templateUrl: "meal.html",
+  selector: "page-meal-home",
+  templateUrl: "meal-home.html",
 })
-export class MealPage {
+export class MealHomePage {
 
   private meals: Array<{ imgSrc: string, imgTitle: string, seller: string, price: string, seasonMeal: boolean }>;
 

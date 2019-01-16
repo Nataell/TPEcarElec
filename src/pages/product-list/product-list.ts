@@ -1,14 +1,14 @@
 import { BasketPage } from "../basket/basket";
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import { ProductsViewPage } from "../products-view/products-view";
+import { ProductViewPage } from "../product-view/product-view";
 
 @Component({
-  selector: "page-products-list",
-  templateUrl: "products-list.html",
+  selector: "page-product-list",
+  templateUrl: "product-list.html",
 })
 
-export class ProductsListPage {
+export class ProductListPage {
 
   public titlePage: string;
   public products: Array<{ imgSrc: string, imgTitle: string, seller: string, price: string, seasonProduct: boolean }>;
@@ -31,7 +31,7 @@ export class ProductsListPage {
 
   public goProduct(productName) {
     console.log(productName);
-    this.navCtrl.push(ProductsViewPage, {
+    this.navCtrl.push(ProductViewPage, {
       title: productName,
     });
   }

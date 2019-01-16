@@ -8,17 +8,17 @@ import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
 import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
 import { MealListPage } from "../pages/meal-list/meal-list";
-import { MealPage } from "../pages/meal/meal";
+import { MealHomePage } from "../pages/meal-home/meal-home";
 import { MealViewPage } from "../pages/meal-view/meal-view";
 import { MyApp } from "./app.component";
 import { NewRecipeBasisPage } from "../pages/new-recipe-basis/new-recipe-basis";
 import { NewRecipeIngredientsPage } from "../pages/new-recipe-ingredients/new-recipe-ingredients";
 import { NewRecipeStepsPage } from "../pages/new-recipe-steps/new-recipe-steps";
 import { ProductHomePage } from "../pages/product-home/product-home";
-import { ProductsListPage } from "../pages/products-list/products-list";
-import { ProductsViewPage } from "../pages/products-view/products-view";
-import { Recipe_WelcomePage } from "../pages/recipe_welcome/recipe_welcome";
-import { SingleRecipePage } from "../pages/single-recipe/single-recipe";
+import { ProductListPage } from "../pages/product-list/product-list";
+import { ProductViewPage } from "../pages/product-view/product-view";
+import { RecipeHomePage } from "../pages/recipe-home/recipe-home";
+import { RecipeViewPage } from "../pages/recipe-view/recipe-view";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 
@@ -30,18 +30,18 @@ import { StatusBar } from "@ionic-native/status-bar";
     BasketPage,
     HomePage,
     LoginPage,
-    MealPage,
+    MealHomePage,
     MyApp,
     MealListPage,
     MealViewPage,
     NewRecipeBasisPage,
     NewRecipeIngredientsPage,
     NewRecipeStepsPage,
-    ProductsListPage,
+    ProductListPage,
     ProductHomePage,
-    ProductsViewPage,
-    Recipe_WelcomePage,
-    SingleRecipePage,
+    ProductViewPage,
+    RecipeHomePage,
+    RecipeViewPage,
   ],
   entryComponents: [
     AccountCreationPage,
@@ -49,18 +49,18 @@ import { StatusBar } from "@ionic-native/status-bar";
     BasketPage,
     HomePage,
     LoginPage,
-    MealPage,
+    MealHomePage,
     MyApp,
     NewRecipeBasisPage,
     NewRecipeIngredientsPage,
     NewRecipeStepsPage,
     ProductHomePage,
-    ProductsListPage,
-    ProductsViewPage,
-    Recipe_WelcomePage,
+    ProductListPage,
+    ProductViewPage,
+    RecipeHomePage,
     MealListPage,
     MealViewPage,
-    SingleRecipePage,
+    RecipeViewPage,
   ],
   imports: [
     BrowserModule,

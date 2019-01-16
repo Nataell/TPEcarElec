@@ -1,8 +1,8 @@
 import { BasketPage } from "../basket/basket";
 import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
-import { ProductsListPage } from "../products-list/products-list";
-import { ProductsViewPage } from "../products-view/products-view";
+import { ProductListPage } from "../product-list/product-list";
+import { ProductViewPage } from "../product-view/product-view";
 
 @Component({
   selector: "page-product-home",
@@ -29,7 +29,7 @@ export class ProductHomePage {
 
   public goNewProduct(namePage) {
     console.log("Les nouveaux produits.");
-    this.navCtrl.push(ProductsListPage, {
+    this.navCtrl.push(ProductListPage, {
       title: namePage,
     });
   }
@@ -44,7 +44,7 @@ export class ProductHomePage {
 
   public goProduct(productName) {
     console.log(productName);
-    this.navCtrl.push(ProductsViewPage, {
+    this.navCtrl.push(ProductViewPage, {
       title: productName,
     });
   }

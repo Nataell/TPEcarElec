@@ -3,11 +3,11 @@ import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 
 @Component({
-  selector: "page-products-view",
-  templateUrl: "products-view.html",
+  selector: "page-product-view",
+  templateUrl: "product-view.html",
 })
 
-export class ProductsViewPage {
+export class ProductViewPage {
 
   public titlePage: string;
   public productInfos: { imgSrc: string, imgTitle: string, seller: string, price: string, quantity: string, seasonProduct: boolean };

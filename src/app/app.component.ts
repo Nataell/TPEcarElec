@@ -5,10 +5,10 @@ import { AccountPage } from "../pages/account/account";
 import { AuthServiceProvider } from "../providers/auth-service/auth-service";
 import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
-import { MealPage } from "../pages/meal/meal";
+import { MealHomePage } from "../pages/meal-home/meal-home";
 import { ProductHomePage } from "../pages/product-home/product-home";
-import { Recipe_WelcomePage } from "../pages/recipe_welcome/recipe_welcome";
-import { SingleRecipePage } from "../pages/single-recipe/single-recipe";
+import { RecipeHomePage } from "../pages/recipe-home/recipe-home";
+import { RecipeViewPage } from "../pages/recipe-view/recipe-view";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 import { timer } from "rxjs/observable/timer";
@@ -62,9 +62,9 @@ export class MyApp {
   public refreshMenu() {
     this.pages = [
       { title: "Accueil", component: HomePage, icon: "home" },
-      { title: "Recettes", component: Recipe_WelcomePage, icon: "bookmarks" },
+      { title: "Recettes", component: RecipeHomePage, icon: "bookmarks" },
       { title: "Produits", component: ProductHomePage, icon: "nutrition" },
-      { title: "Repas", component: MealPage, icon: "restaurant" },
+      { title: "Repas", component: MealHomePage, icon: "restaurant" },
     ];
     if (this.connected) {
       this.pages.push({ title: "Mon Compte", component: AccountPage, icon: "contact" });
@@ -73,7 +73,7 @@ export class MyApp {
       this.pages.push({ title: "Créer un compte", component: AccountCreationPage, icon: "create" });
     }
     if (this.developmentState) {
-      this.pages.push({ title: "RecetteTest", component: SingleRecipePage, icon: "alert" });
+      this.pages.push({ title: "RecetteTest", component: RecipeViewPage, icon: "alert" });
     }
   }
 
