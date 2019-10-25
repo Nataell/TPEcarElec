@@ -1,1 +1,41 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-nav id="nav" [root]="rootPage" #nav></ion-nav>
+
+<div *ngIf="showSplash" class="splash">
+	<div id="cooking">
+	  <div class="bubble"></div>
+	  <div class="bubble"></div>
+	  <div class="bubble"></div>
+	  <div class="bubble"></div>
+	  <div class="bubble"></div>
+	  <div id="area">
+	    <div id="sides">
+	      <div id="pan"></div>
+	      <div id="handle"></div>
+	    </div>
+	    <div id="pancake">
+	      <div id="pastry"></div>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+<ion-menu [content]="nav" id="menu">
+
+  <ion-header>
+    <ion-toolbar color="theme-color">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)" menuClose="menu">
+        <ion-icon name={{p.icon}} item-left></ion-icon>{{p.title}}
+      </button>
+      <button *ngIf="connected" ion-item (click)="askLogOut()" menuClose="menu">
+        <ion-icon color="danger" name="log-out" item-left></ion-icon>Déconnexion
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>

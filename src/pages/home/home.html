@@ -1,8 +1,15 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+	<ion-navbar color="theme-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Accueil</ion-title>
+		<ion-buttons end>
+			<button ion-button clear icon-only (click)="goBasket()"	>
+	      <ion-icon name='cart' is-active="false"></ion-icon>
+				<ion-badge color="accent" class="basketBadge" item-right>5</ion-badge>
+			</button>
+		</ion-buttons>
   </ion-navbar>
 </ion-header>
 

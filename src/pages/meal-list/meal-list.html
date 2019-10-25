@@ -1,0 +1,30 @@
+<ion-header>
+	<ion-navbar color="theme-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{titlePage}}</ion-title>
+		<ion-buttons end>
+			<button ion-button clear icon-only (click)="goBasket()"	>
+	      <ion-icon name='cart' is-active="false"></ion-icon>
+			</button>
+		</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+	    <ion-refresher-content></ion-refresher-content>
+	 </ion-refresher>
+	<ion-list>
+  	<ion-item *ngFor="let meal of meals" (click)="goMeal(meal.imgTitle)">
+    	<ion-thumbnail item-start>
+      	<img src={{meal.imgSrc}}>
+	    </ion-thumbnail>
+	    <h2 class="cut-text-title">{{meal.imgTitle}}</h2>
+	    <p>{{meal.seller}} • €{{meal.price}}</p>
+	    <button ion-button clear item-end>Détails</button>
+  	</ion-item>
+	</ion-list>
+</ion-content>

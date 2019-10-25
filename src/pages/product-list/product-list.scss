@@ -1,0 +1,12 @@
+page-product-list {
+	img{
+		object-fit: cover;
+	}
+	.cut-text-title {
+		width : 100%;
+	  overflow:hidden;
+	  display:inline-block;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	}
+}
